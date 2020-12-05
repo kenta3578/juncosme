@@ -1,0 +1,26 @@
+
+section.news.c-section.js-animation
+  .news__Inner.c-clearFix.c-section__Inner
+    .news__InnerBox
+      .news__TitleBox
+        h2.c-section__Title 新着情報
+        img.c-section__Title-Img(src="assets/images/g-line.svg" alt="")
+      ul.news__Lists
+        include ../include/_NEWSLIST.pug
+        - const showNewsData = topNewsData.reverse().slice(-4)
+          each item in showNewsData
+              li.news__List
+                a.news__Link.news__Link-Nav(href=item.link)
+                  span.news__ListInner
+                    span.news__Date #{item.date}
+                    span.news__Category(class=item.categoryClass) #{item.category}
+                    span.news__Desc #{item.desc}
+    include ../include/_CALENDAR.pug
+    a.c-moreButton(href=`news${html}`) もっと見る
+      br
+      |(新着情報一覧)
+
+
+    .c-faceBook__Outer
+      .
+        <div class="fb-page" data-href="https://m.facebook.com/%E3%82%B8%E3%83%A5%E3%83%B3%E3%82%B3%E3%82%B9%E3%83%A1%E3%83%8F%E3%82%A6%E3%82%B9-251773231551140/" data-tabs="timeline" data-width="500px" data-height="500px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://m.facebook.com/%E3%82%B8%E3%83%A5%E3%83%B3%E3%82%B3%E3%82%B9%E3%83%A1%E3%83%8F%E3%82%A6%E3%82%B9-251773231551140/" class="fb-xfbml-parse-ignore"><a href="https://m.book.com/%E3%82%B8%E3%83%A5%E3%83%B3%E3%82%B3%E3%82%B9%E3%83%A1%E3%83%8F%E3%82%A6%E3%82%B9-251773231551140/">ジュン・コスメハウス</a></blockquote></div>

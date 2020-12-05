@@ -1,0 +1,49 @@
+header.js-Header.js-Header-Sub
+  .header__inner
+    a.header__Title.js-Header__Title(href=`index${html}#hero`)
+      img.header__Title-Img(src="./assets/images/icon_clover.svg" ,alt="",)
+      | JUN COSME HOUSE
+    .menuWrapper
+      a.menuButton(href="#")
+        span
+  ul.toggleMenus.js-toggleMenu
+    li.toggleMenu_list
+      a.toggleMenu_link(href=`index${html}`) TOP
+    li.toggleMenu_list
+      a.toggleMenu_link.js-SliedTriger.toggleMenu_link-Nav お知らせ
+    li.toggleMenu_list.js-SliedMenu
+      ul.toggleMenu_Child
+        li.toggleClose-isPcOuter
+          a.toggleClose-isPc
+        //- li.toggleMenu_ChildList
+        //-   a.toggleMenu_link.js-ToggleCls(href="news${html}#news") 新着情報
+        li.toggleMenu_ChildList
+          a.toggleMenu_link.js-ToggleCls(href=`news${html}#ivyNews`)  アイビーニュース
+        //- li.toggleMenu_ChildList
+        //-   a.toggleMenu_link.js-ToggleCls(href="news${html}#calendar")  カレンダー
+    li.toggleMenu_list
+      a.toggleMenu_link.js-SliedTriger.toggleMenu_link-Nav サービス
+    li.toggleMenu_list.js-SliedMenu
+      ul.toggleMenu_Child
+        li.toggleClose-isPcOuter
+          a.toggleClose-isPc
+        li.toggleMenu_ChildList
+          a.toggleMenu_link.js-ToggleCls(href=`service${html}#este`) エステ
+        li.toggleMenu_ChildList
+          a.toggleMenu_link.js-ToggleCls(href=`service${html}#ivy`)  化粧品販売
+        li.toggleMenu_ChildList
+          a.toggleMenu_link.js-ToggleCls(href=`service${html}#rental`)  レンタルスペース
+        li.toggleMenu_ChildList
+          a.toggleMenu_link.js-ToggleCls(href=`service${html}#event`)  イベント
+    li.toggleMenu_list
+      a.toggleMenu_link(href=`company${html}`) 会社概要
+    li.toggleMenu_list
+      a.toggleMenu_link.js-ToggleCls(href=`${url}${html}#Accsses`) アクセス
+    li.toggleContact
+      p.toggleContact__Desc お問い合わせ、ご予約は
+      p.toggleContact__Num
+        img.toggleContact__Img(src="assets/images/phone.svg" alt="")
+        | 0794-86-2324
+        span.toggleContact__Subdesk (会社)
+
+

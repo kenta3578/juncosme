@@ -1,0 +1,143 @@
+@charset "utf-8";
+@import "../foundation/_mixin.scss";
+.calendar {
+  margin: 12vw 0;
+  @include pc {
+    margin: 8rem 0;
+    width: 30%;
+    min-width: 30rem;
+  }
+  &-service {
+    width: 85%;
+    margin: 12vw auto;
+    @include pc {
+      margin: 0;
+    }
+  }
+  &-index {
+    margin: 12vw 0;
+    @include pc {
+      margin: 7rem 10% 0 0;
+    }
+  }
+  .p {
+    background: red;
+  }
+
+  &__Inner {
+    font-family: sans-serif;
+  }
+  &__Title {
+    font-size: get_vw(18);
+    padding: 2vw 3vw;
+    border: 2px solid $light-gray;
+    @include pc {
+      padding: 1.2rem 2rem;
+      font-size: 1.6rem;
+    }
+
+    font-weight: bold;
+    display: inline-block;
+  }
+  &__Control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5vw 0;
+    @include pc {
+      margin: 2rem 0;
+    }
+  }
+  &__Previous {
+    border: 2px solid $light-gray;
+    display: block;
+    padding: 3vw 4vw;
+    text-decoration: none !important;
+    color: $blue;
+    @include buttonShadow();
+    @include pc {
+      padding: 1.6rem 2rem;
+    }
+  }
+  &__Month {
+    font-size: get_vw(18);
+    border: 2px solid $light-gray;
+    padding: 2vw 3vw;
+    @include pc {
+      padding: 1.6rem 2rem;
+      font-size: 1.6rem;
+    }
+  }
+  &__Year {
+    display: block;
+    float: right;
+    margin-top: 3vw;
+    @include pc {
+      margin: 1rem;
+    }
+  }
+  &__MonthNumber {
+    font-size: get_vw(24);
+    @include pc {
+      font-size: 1.6rem;
+    }
+  }
+  &__Next {
+    border: 2px solid $light-gray;
+    display: block;
+    padding: 3vw 4vw;
+    text-decoration: underline;
+    color: $blue;
+    text-decoration: none !important;
+    @include buttonShadow();
+    @include pc {
+      padding: 1.6rem 2rem;
+    }
+  }
+  &__Contents {
+    border: 2px solid $light-gray;
+  }
+  &__ListBox {
+    display: flex;
+    @include border();
+    align-items: center;
+
+    border-bottom: none;
+  }
+  &__Date {
+    width: 35%;
+    padding: 2vw 3vw;
+    text-align: left;
+    @include pc {
+      padding: 0.4rem;
+      font-size: 1.2rem;
+    }
+  }
+  &__Desc {
+    min-height: 9vw;
+    width: 80%;
+    padding: 2vw;
+    text-align: left;
+    border-left: 1px solid $light-gray;
+    line-height: 1.15;
+    @include pc {
+      min-height: 3rem;
+      padding: 0.4rem;
+      font-size: 1.2rem;
+    }
+  }
+  &__Sunday {
+    color: $rose;
+  }
+  // &__Saturday {
+  //   color:$blue
+  // }
+  a,
+  a:visited {
+    text-decoration: underline;
+    color: $blue;
+  }
+}
+.calendar__Contents {
+  background: aliceblue;
+}

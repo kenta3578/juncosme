@@ -1,0 +1,218 @@
+@import "../foundation/_mixin.scss";
+.eventPop .eventPop__Inner .c-moreButton {
+  @include pc {
+    width: 40%;
+    margin: 0 auto;
+    position: relative;
+    left: 0;
+  }
+}
+.eventPop {
+  position: fixed;
+  z-index: 20;
+  overflow-y: scroll;
+  left: 0;
+  bottom: 10%;
+  top: 15%;
+  display: none;
+  color: $font;
+  box-shadow: 0px 0px 2px $shadow;
+  &::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    opacity: 0.8;
+  }
+  @include pc {
+    left: 50%;
+    transform: translate(-41%);
+    top: 5%;
+    bottom: 5%;
+    width: 63%;
+    border: 1px solid $gold;
+    max-width: 90rem;
+  }
+
+  &__Inner {
+    background: #fffe;
+    width: 85%;
+    padding: 6vw 0 12vw;
+    margin: 0 auto;
+    @include buttonShadow();
+    position: relative;
+    @include pc {
+      padding: 4rem 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__Box {
+    @include pc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 5rem;
+    }
+  }
+
+  &__Title {
+    font-size: get_vw(20);
+    text-align: center;
+    margin: 21vw auto 0;
+    border-bottom: 1px solid $green;
+    text-align: center;
+    line-height: 2;
+    font-weight: bold;
+    width: 85%;
+    @include pc {
+      width: 100%;
+      margin: 0px auto 0;
+      font-size: 3rem;
+    }
+  }
+
+  &__Img {
+    margin: 6vw 0;
+    @include pc {
+      margin: 0;
+      height: 50%;
+      width: 47%;
+      display: block;
+    }
+  }
+  &__Desc {
+    position: relative;
+    text-align: left;
+    line-height: 2;
+    margin: 0 auto;
+    width: 90%;
+    @include pc {
+      width: 47%;
+      border: 1px solid $gold;
+      font-size: 1.6rem;
+      padding: 2rem;
+    }
+  }
+  &__Message {
+    margin: 3vw;
+    @include pc {
+      margin: 1rem;
+    }
+  }
+}
+.eventPop__ButtonOuter {
+  width: 85%;
+  background-color: $font;
+  position: fixed;
+  top: 14%;
+  height: 20vw;
+  z-index: 1;
+  @include pc {
+    height: auto;
+    top: -2%;
+    background: none;
+    width: 5.5rem;
+    margin-left: 2%;
+  }
+}
+
+.eventPop__CloseOuter {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 3vw;
+  @include pc {
+    width: 14%;
+    margin-top: 4rem;
+    width: 5.5rem;
+  }
+}
+.eventPop__Close {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  z-index: 0;
+  width: 10vw;
+  height: 9vw;
+  margin: 0 auto;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+  &-Txt {
+    font-size: get_vw(12);
+    color: #fff;
+    display: block;
+    text-align: center;
+    @include pc {
+      font-size: 1.2rem;
+      color: $font;
+      padding-left: 0.7rem;
+    }
+  }
+  @include pc {
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid $gold;
+    border-radius: 50%;
+    padding: 3rem;
+  }
+}
+
+.eventPop__Close span,
+.eventPop__Close::before,
+.eventPop__Close::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 11vw;
+  height: 1vw;
+  margin: auto;
+  background: #fff;
+  border-radius: 50%;
+  @include pc {
+    width: 5rem;
+    height: 0.5rem;
+    background: $font;
+    display: block;
+    box-shadow: 0 0 0.2rem $shadow;
+  }
+}
+
+.eventPop__Close::before {
+  z-index: 2;
+  transform: translate(0, -12px);
+  content: "";
+}
+.eventPop__Close::after {
+  z-index: 2;
+  transform: translate(0, 12px);
+  content: "";
+}
+
+.eventPop__Close::before {
+  transform: rotate(45deg);
+}
+.eventPop__Close::after {
+  transform: rotate(-45deg);
+}
+.eventPop section {
+  display: none;
+}
+
+.eventPop .popShow {
+  display: block;
+  @include pc {
+    width: 80%;
+    margin: 0px auto 4rem;
+  }
+}

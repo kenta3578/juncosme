@@ -1,0 +1,63 @@
+@import "../foundation/_mixin.scss";
+.president {
+  background: #fff;
+
+  &__Inner {
+    width: 85%;
+    padding: 12vw 0;
+    margin: 0 auto;
+    @include pc {
+      padding: 0px 0 8rem;
+      width: 85%;
+    }
+  }
+  &__InnerBox {
+    @include pc {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+  &__DescBox {
+    display: flex;
+    width: 100%;
+    margin: 12vw auto;
+    justify-content: space-around;
+    align-items: center;
+    @include pc {
+      margin: 4rem auto;
+      width: 35%;
+      display: block;
+    }
+  }
+  &__Img {
+    width: 38vw;
+    height: 55vw;
+    border-radius: 50%;
+    @include pc {
+      height: 28rem;
+      width: 20rem;
+      display: block;
+      width: 20rem;
+      margin: 0 auto 4rem;
+    }
+  }
+  &__Desc {
+    text-align: center;
+    line-height: 2;
+    width: auto;
+  }
+  &__MessageBox {
+    @include pc {
+      display: block;
+      width: 70%;
+    }
+  }
+  &__Message {
+    margin: 3vw;
+    @include pc {
+      margin: 2rem;
+      font-size: 1.6rem;
+    }
+  }
+}

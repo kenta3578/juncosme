@@ -1,0 +1,27 @@
+doctype html
+- const url = "news"
+- const pageClass = "sub"
+- const html =""
+
+html(lang='ja')
+  head
+    meta(charset='utf-8')
+    -
+      $imgPath = './assets/images/'
+      $selfURL = 'https://jun-cosme.net/news.html'
+      $corpURL = 'https://example.com'
+      $entryURL = 'https://example.com'
+      $list2018URL = 'https://example.com'
+    include include/_head.pug
+    include include/_script.pug
+  body.news
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v3.3"></script>
+    .l-Wrapper
+      include include/_header_sub.pug
+      .l-Content
+        .l-Main
+          main
+            include section/_NEWS_MAIN.pug
+            include section/_CONTACT.pug
+      include include/_footer.pug

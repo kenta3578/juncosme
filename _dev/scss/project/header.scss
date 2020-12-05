@@ -1,0 +1,530 @@
+@import "../foundation/_mixin.scss";
+
+header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 200;
+  background: transparent;
+  @include baseTransion;
+  @include pc {
+    left: 0;
+    bottom: 0;
+    top: 0;
+    width: 17rem;
+  }
+}
+.header-OnContens {
+  background: $header-black;
+
+  @include pc {
+    background: #fff;
+    box-shadow: -0.2rem 0 0.5rem $gold;
+  }
+}
+.header-OnToggle {
+  background: #fff !important;
+}
+
+.header__inner {
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: 3.5vw 0;
+  @include pc {
+    padding: 3rem 0;
+  }
+}
+.header__Title-OnContens {
+  color: #fff;
+  opacity: 1 !important;
+  pointer-events: all !important;
+  @include pc {
+    color: $rose !important;
+    pointer-events: all;
+  }
+}
+.header__Title-OnToggle {
+  color: $font;
+  opacity: 1;
+  @include pc {
+    color: $rose;
+  }
+}
+.header__Title {
+  font-size: get_vw(20);
+  color: #fff;
+  line-height: 1.4;
+  @include letterDifineShadow;
+  opacity: 1;
+  letter-spacing: -1px;
+  opacity: 0;
+  pointer-events: none;
+  &:hover {
+    display: block;
+  }
+  @include pc {
+    font-size: 2.4rem;
+    text-align: center;
+    text-shadow: 0 0 2px $shadow;
+    margin-top: 7rem;
+  }
+
+  &-OnToggle {
+    color: $font !important;
+    opacity: 1;
+    @include pc {
+      color: $rose;
+    }
+  }
+
+  &-Img {
+    margin-right: 2vw;
+    height: 6vw;
+    width: 6vw;
+    /* display: initial; */
+    display: inline-block;
+    vertical-align: baseline;
+    @include pc {
+      margin-right: 2rem;
+      height: 3rem;
+      width: 3rem;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &-White {
+    width: 100%;
+  }
+  &-ml {
+    display: block;
+    text-align: right;
+    margin-left: 2vw;
+    position: relative;
+    left: 5vw;
+  }
+  &-OnToggle {
+    color: $font;
+  }
+}
+.header__toggle {
+  display: none;
+}
+.header__toggleImg {
+  font-size: get_vw(24);
+  margin-right: 3vw;
+  color: $font;
+  display: none;
+  @include pc {
+    display: block;
+  }
+}
+
+.toggleMenus {
+  overflow-y: scroll;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 16vw;
+  bottom: 0;
+  opacity: 0.95;
+  z-index: 50;
+  transition: 0.2;
+  background: $header-black;
+  color: #fff;
+  font-size: get_vw(18);
+  display: none;
+  @include pc {
+    display: block;
+    position: relative;
+    background: transparent;
+    top: 0%;
+  }
+}
+.toggleMenu_list {
+  text-align: left;
+  margin: 0 auto;
+  width: 85%;
+  border-bottom: 1px solid;
+  @include pc {
+    width: 85%;
+    border-color: $font;
+    margin: 0 auto;
+    border: none;
+  }
+
+  &:nth-child(1) {
+    margin-top: 4.7vw;
+    @include pc {
+    }
+  }
+  &:nth-child(3) {
+    padding-right: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+    padding-left: 10vw;
+    display: none;
+    @include pc {
+      transition: 0.3s;
+      position: fixed;
+      bottom: 0;
+      top: 0;
+      background: $gold-back;
+      padding-left: 0;
+      width: 20rem;
+    }
+  }
+  &:nth-child(5) {
+    padding-right: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+    padding-left: 10vw;
+    display: none;
+    @include pc {
+      transition: 0.3s;
+      position: fixed;
+      bottom: 0;
+      top: 0;
+      background: $gold-back;
+      padding-left: 0;
+      width: 20rem;
+    }
+  }
+  &:nth-child(7) {
+    margin-bottom: 32vw;
+    @include pc {
+    }
+  }
+}
+.toggleMenu_link {
+  text-align: left;
+  color: #fff;
+  padding: 4.7vw;
+  display: block;
+  position: relative;
+  @include pc {
+    line-height: 1.7;
+    font-size: 1.8rem;
+    color: $font;
+    padding: 2rem;
+    text-align: center;
+  }
+  &:visited {
+    @include pc {
+      color: $font;
+    }
+  }
+  &:after {
+    display: none;
+    @include pc {
+      @include baseTransion();
+      display: block;
+      content: "";
+      height: 0.1rem;
+      width: 0;
+      background: $font;
+    }
+  }
+  &:hover:after {
+    width: 100%;
+  }
+}
+
+.toggleMenu_link-Nav::before {
+  content: "";
+  width: 3vw;
+  height: 3vw;
+  display: block;
+  position: absolute;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transform: rotate(45deg);
+  left: -1vw;
+  top: 41%;
+  @include baseTransion();
+  @include pc {
+    display: none;
+  }
+}
+
+.toggleMenu_link-Nav-Toggle::before {
+  transform: rotate(135deg);
+}
+
+.toggleMenu_Child {
+  text-align: left;
+  text-align: left;
+  margin: 0 auto;
+  @include pc {
+    top: 30.9%;
+    position: relative;
+  }
+}
+.toggleMenu_ChildList {
+  text-align: left;
+  border-bottom: 1px solid;
+  font-size: get_vw(14);
+  list-style: initial;
+  &:nth-child(1) {
+    padding-top: 0;
+  }
+  @include pc {
+    list-style: none;
+    border: none;
+  }
+  .toggleMenu_link {
+    @include pc {
+      color: #fff;
+    }
+  }
+  @include pc {
+    color: #fff;
+  }
+}
+
+.menuWrapper {
+  position: relative;
+  z-index: 0;
+  width: 10vw;
+  height: 9vw;
+  @include pc {
+    display: none;
+  }
+}
+
+.menuButton {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  z-index: 0;
+  width: 9vw;
+  height: 9vw;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.menuButton span,
+.menuButton::before,
+.menuButton::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1vw;
+  width: 9vw;
+  margin: auto;
+  background: $font;
+  border-radius: 20px;
+}
+.menuButton-OnContents span,
+.menuButton-OnContents::before,
+.menuButton-OnContents::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  border-radius: 20px;
+  height: 1vw;
+  width: 9vw;
+  margin: auto;
+  background: #fff;
+}
+.menuButton span {
+  overflow: hidden;
+  z-index: 1;
+  background: $font;
+}
+.menuButton-OnContents span {
+  overflow: hidden;
+  z-index: 1;
+  background: #fff;
+}
+.menuButton::before {
+  z-index: 2;
+  transform: translate(0, -3vw);
+  content: "";
+}
+.menuButton::after {
+  z-index: 2;
+  transform: translate(0, 3vw);
+  content: "";
+}
+
+.menuButton span {
+  opacity: 1;
+  transition: opacity 150ms 50ms;
+}
+.menuButton::before,
+.menuButton::after {
+  transition: transform 200ms;
+}
+
+.menuButton.active span {
+  opacity: 0;
+  transition: opacity 150ms;
+}
+.menuButton.active::before {
+  transform: rotate(45deg);
+}
+.menuButton.active::after {
+  transform: rotate(-45deg);
+}
+@keyframes toggleShow {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes toggleMenuShow-isPc {
+  0% {
+    opacity: 0;
+    left: -20rem;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+    left: 17rem;
+  }
+}
+@keyframes toggleMenuHide-isPc {
+  0% {
+    display: block;
+    opacity: 1;
+    left: 17rem;
+  }
+  99% {
+    display: block;
+    opacity: 0;
+    left: -20rem;
+  }
+
+  100% {
+    display: block;
+    opacity: 0;
+    left: -20rem;
+  }
+}
+.toggleMenus .toggleShowAnime-isPc {
+  left: 17rem;
+  display: block;
+  animation: toggleMenuShow-isPc 300ms ease 0s infinite alternate;
+  animation-iteration-count: 1;
+}
+.toggleMenus .toggleHideAnime-isPc {
+  display: block;
+  animation: toggleMenuHide-isPc 300ms ease 0s infinite alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.toggleShowAnime {
+  display: block;
+  animation: toggleShow 300ms ease 0s infinite alternate;
+  animation-iteration-count: 1;
+}
+
+.toggleContact {
+  position: fixed;
+  background: #fff;
+  color: $font;
+  padding: 2vw;
+  padding-top: 3vw;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  @include pc {
+    display: none;
+  }
+
+  &__Desc {
+    font-size: get_vw(12);
+    font-weight: bold;
+    line-height: 1;
+  }
+  &__Num {
+    font-size: get_vw(20);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    width: 65%;
+    margin: 0 auto;
+    a {
+      color: $blue;
+    }
+  }
+  &__Img {
+    height: 10vw;
+  }
+  &__Subdesk {
+    font-size: get_vw(12);
+    margin-left: 2vw;
+  }
+}
+.toggleClose-isPcOuter {
+  display: none;
+  @include pc {
+    display: block;
+    top: -10vh;
+    position: relative;
+  }
+  .toggleClose-isPc {
+    @include pc {
+      display: block;
+      position: relative;
+      height: 5rem;
+      border: 0.1rem solid #fff;
+      background: #fff;
+      width: 6.2rem;
+      margin: 0 auto;
+      padding: 3.5rem;
+      display: block;
+      border-radius: 20px;
+      box-shadow: 0 0 0.2rem $shadow;
+    }
+    &:after,
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 20px;
+      height: 5px;
+      width: 6rem;
+      margin: auto;
+      background: $font;
+      box-shadow: 0 0 0.2rem $shadow;
+    }
+    &::after {
+      transform: rotate(45deg);
+    }
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+/////PC

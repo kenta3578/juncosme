@@ -1,0 +1,147 @@
+@import "../foundation/_mixin.scss";
+
+.message {
+  padding-top: 0 !important;
+  &:before {
+    display: none;
+    @include pc {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      height: 80rem;
+      z-index: -1;
+      right: 0;
+      background: $rose-back;
+    }
+  }
+  &__Title {
+    font-size: get_vw(32);
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    position: relative;
+    letter-spacing: 0.1em;
+    left: 10vw;
+    top: 10vw;
+    @include letterShadow;
+    @include pc {
+      margin-top: 0px;
+      font-size: 4rem;
+      left: 44%;
+      top: 15rem;
+    }
+  }
+
+  &__Inner {
+    position: relative;
+    overflow: hidden;
+    background: url("../images/hero_pic@2x.jpg");
+    height: 100vh;
+    @include bgBase(no-repeat, cover, center);
+    color: #fff;
+    @include pc {
+      background: none;
+      width: 100%;
+      height: 80rem;
+      position: relative;
+    }
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      position: absolute;
+      z-index: 0;
+      background: rgba(0, 0, 0, 0.2);
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      @include pc {
+        position: static;
+        display: inline-block;
+        content: "";
+        width: 50%;
+        background: url("../images/hero_pic@2x.jpg");
+        height: 100vh;
+        @include bgBase(no-repeat, cover, center);
+        height: 80rem;
+      }
+    }
+  }
+  &__InnerBox {
+    color: #fff;
+    @include pc {
+      position: relative;
+      width: 49%;
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  &__Desc {
+    margin-top: 20vw;
+    font-size: get_vw(24);
+    text-align: left;
+    position: relative;
+    left: 19vw;
+    line-height: 1.5;
+    @include letterShadow;
+    @include pc {
+      margin-top: 20rem;
+      font-size: 2.4rem;
+      left: 0;
+      text-align: center;
+    }
+    &-fontM {
+      font-size: get_vw(28);
+      @include pc {
+        font-size: 2.8rem;
+      }
+    }
+    &-fontL {
+      font-size: get_vw(32);
+      @include pc {
+        font-size: 3.2rem;
+      }
+    }
+    &-Bottom {
+      text-align: center;
+      display: block;
+      margin: 10vw auto 0;
+      font-size: get_vw(24);
+      position: relative;
+      bottom: 8vw;
+      @include letterShadow;
+      @include pc {
+        font-size: 2.4rem;
+        bottom: 0;
+        margin: 0 auto;
+        margin-top: 7rem;
+      }
+    }
+  }
+}
+
+.c-colorYellow {
+  color: $yellow;
+}
+.c-colorRose {
+  font-size: get_vw(28);
+  color: $rose;
+  background: #fff;
+  position: relative;
+  bottom: 0;
+  left: 35vw;
+  @include pc {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 3.2rem;
+    left: auto;
+    bottom: 1rem;
+    margin-top: 3rem;
+    display: block;
+    text-align: center;
+  }
+}

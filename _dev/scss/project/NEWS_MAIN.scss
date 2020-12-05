@@ -1,0 +1,171 @@
+@charset "utf-8";
+@import "../foundation/_mixin.scss";
+.serviceMain {
+  background: #fff;
+  @include pc {
+    z-index: 0;
+    position: relative;
+    padding-top: 0 !important;
+  }
+}
+.newsMain {
+  background-color: #fff;
+  padding: 12vw 0;
+
+  @include pc {
+    padding-bottom: 8rem;
+    padding-top: 0;
+  }
+
+  &__Inner {
+    width: 85%;
+    padding: 12vw 0;
+    margin: 0 auto;
+    padding: 0;
+    @include pc {
+      display: block;
+      padding: 0 8rem;
+      width: 92%;
+    }
+  }
+  &__Title {
+    font-size: get_vw(32);
+    text-align: center;
+    @include pc {
+      font-size: 4.8rem;
+    }
+  }
+  .news__Lists {
+    @include pc {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: left;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  .news__List {
+    @include pc {
+      width: 43%;
+      margin-right: 2rem;
+      margin-left: 2rem;
+      flex-grow: 1;
+    }
+    .news__Desc {
+      @include pc {
+        width: 80%;
+      }
+    }
+  }
+}
+.ivyNews {
+  &__Img {
+    width: 100%;
+    margin: 10vw auto;
+    display: block;
+
+    @include pc {
+      margin: 0 auto;
+      width: auto;
+      height: 30rem;
+    }
+  }
+  &__Desc {
+    @include pc {
+      width: 85%;
+      margin: 4rem auto;
+      text-align: center;
+    }
+  }
+}
+.newsCalendar {
+  .calendar {
+    @include pc {
+      margin: 8rem auto;
+      width: 85%;
+    }
+
+    &__Inner {
+      @include pc {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 700px;
+      }
+    }
+    &__Title {
+      background: aliceblue;
+
+      @include pc {
+        padding: 1.6rem 2.4rem;
+        font-size: 2rem;
+      }
+      font-weight: bold;
+      display: inline-block;
+    }
+    &__Control {
+      @include pc {
+        margin: 2rem 0;
+      }
+    }
+    &__Previous {
+      background: aliceblue;
+      @include pc {
+        padding: 2rem 4.2rem;
+      }
+    }
+    &__Month {
+      background: aliceblue;
+      @include pc {
+        padding: 2rem 2.4rem;
+        font-size: 2rem;
+      }
+    }
+    &__Year {
+      @include pc {
+        margin: 1rem;
+      }
+    }
+    &__MonthNumber {
+      @include pc {
+        font-size: 3rem;
+      }
+    }
+    &__Next {
+      background: aliceblue;
+      @include pc {
+        padding: 2rem 4.2rem;
+      }
+    }
+
+    &__Date {
+      @include pc {
+        padding: 0.4rem;
+        font-size: 1.6rem;
+        text-align: center;
+      }
+    }
+    &__Desc {
+      background: aliceblue;
+      @include pc {
+        min-height: 3rem;
+        padding: 0.4rem;
+        font-size: 1.6rem;
+        text-align: center;
+      }
+    }
+  }
+  .c-faceBook__Outer {
+    @include pc {
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.newsCalendar__Message {
+  @include pc {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

@@ -1,0 +1,42 @@
+
+section.service.c-section.js-animation
+  .service__Inner.c-clearFix.c-section__Inner
+    h2.c-section__Title サービス
+    img.c-section__Title-Img(src="assets/images/g-line.svg" alt="")
+    ul.service__Lists
+      -
+        var topserviceData = [ {
+              title: "エステ",
+              link: "este",
+              img: "service_este",
+              desc: `ソニックスキンケア、ヘナカラー、カラーコーディネートなど、エステを行なっております。`,
+              },{
+              title: "化粧品販売",
+              link: "ivy",
+              img: "service_ivy",
+              desc: `当社はアイビー化粧品の正式な販売店です。<br>
+              お客様のお肌にあった化粧品を一緒に探させていただきます。`,
+              },{
+              title: "レンタルスペース",
+              link: "rental",
+              img: "service_rental",
+              desc: `事務所二階のレンタルスペースを貸し出しています。`,
+              },{
+              title: "イベント開催",
+              link: "event",
+              img: "service_event",
+              desc: `内面を磨くためのイベントを開催しております。<br>イベントの詳細については気軽にお問居合わせください。<br>
+              <br><span class="top__notice">（募集中！！）現在メイクアップショーに参加していただけるモデルさん、メイクさんを募集しております。詳しくは<a class="js-Pop service__PopLink" data-index=0>こちら</a>をご覧ください。</span>`,
+              }
+            ]
+      each item in topserviceData
+          li.service__List
+            h4.service__Title #{item.title}
+            .service__ListInner
+              img.service__Img(src=`./assets/images/${item.img}.jpg` alt="")
+              .service__DescBox
+                p.service__Desc !{item.desc}
+                a.c-moreButton.c-moreButton-t-Service(href=`service${html}#${item.link}`) 詳しく見る
+                  br
+                  |(#{item.title})
+

@@ -1,0 +1,25 @@
+doctype html
+- const url = "service"
+- const html =""
+
+html(lang='ja')
+  head
+    meta(charset='utf-8')
+    -
+      $imgPath = './assets/images/'
+      $selfURL = 'https://jun-cosme.net/sesrvice.html'
+    include include/_head.pug
+    include include/_script.pug
+  body.service
+    .l-Wrapper
+      include include/_header_sub.pug
+      .l-Content
+        .l-Main
+          main
+            include section/_SERVICE_ESTE.pug
+            include section/_SERVICE_IVY.pug
+            include section/_SERVICE_RENTAL.pug
+            include section/_SERVICE_EVENT.pug
+            include section/_EVENT_POP.pug
+            include section/_CONTACT.pug
+      include include/_footer.pug

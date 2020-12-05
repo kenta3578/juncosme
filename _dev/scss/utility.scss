@@ -1,0 +1,35 @@
+@charset "utf-8";
+@import "foundation/_mixin.scss";
+//SP時の改行の制御
+
+.is-Sp {
+  display: none;
+
+  @include sp {
+    display: block;
+  }
+}
+
+.only-Sp {
+  display: none;
+  @include sp {
+    display: block;
+  }
+}
+.only-Pc {
+  display: block;
+  @include sp {
+    display: none;
+  }
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.mb-20vw {
+  margin-bottom: 20vw !important;
+  @include pc {
+    margin-bottom: 6rem !important;
+  }
+}

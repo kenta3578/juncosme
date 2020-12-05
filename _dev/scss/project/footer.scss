@@ -1,0 +1,176 @@
+@import "../foundation/_mixin.scss";
+.footer {
+  background: #484848;
+  position: relative;
+  @include pc {
+    margin-left: 17rem;
+  }
+
+  &__container {
+    width: 100%;
+    text-align: center;
+  }
+  &__outer {
+    padding: 10vw 5vw 5vw;
+    @include pc {
+      width: 85%;
+      padding: 2rem 0;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0 auto;
+    }
+  }
+  &__title {
+    font-size: get_vw(18);
+    color: #fffe;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 74%;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+    @include pc {
+      display: inline;
+      font-size: 2.4rem;
+      width: 30rem;
+      margin: 0 auto;
+      margin-top: -2.5rem;
+      margin-left: -5.2rem;
+      padding-top: 3rem;
+    }
+
+    &-Img {
+      vertical-align: text-top;
+      margin-right: 2vw;
+      height: 6vw;
+      width: 6vw;
+      display: inline-block;
+      vertical-align: baseline;
+      @include pc {
+        height: 3rem;
+        width: 3rem;
+        vertical-align: middle;
+        margin-right: 1rem;
+      }
+    }
+  }
+  &__TitleBottom {
+    @include pc {
+      margin-left: 11.65rem;
+    }
+  }
+  &__inner {
+    width: 90%;
+    padding: 7vw 0;
+    margin: 0 auto;
+    margin-bottom: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    @include pc {
+      width: 60%;
+      padding: 0 0 0;
+      margin-bottom: 0;
+      justify-content: space-evenly;
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+  }
+
+  &__dataLinks {
+    position: relative;
+    width: 50%;
+    padding: 3vw 0;
+    @include pc {
+      width: 45%;
+      padding: 2rem 0;
+    }
+  }
+  &__dataTitle {
+    margin: 0 auto;
+    display: block;
+    padding: 3vw 0;
+    color: #fffe;
+    display: inline;
+    &:visited {
+      color: #fff;
+    }
+    @include pc {
+      font-size: 1.8rem;
+      padding: 0;
+    }
+  }
+
+  &__copyRight {
+    display: block;
+    font-size: get_vw(10);
+    color: #fff;
+    text-align: center;
+    line-height: 1.75;
+    @include pc {
+      width: 50%;
+      font-size: 1.2rem;
+      margin-top: 2rem;
+    }
+  }
+
+  .toTop {
+    position: absolute;
+    top: -25%;
+    right: 5%;
+    border: 1px solid $gold;
+    padding: 5vw 4.5vw;
+    border-radius: 50%;
+    display: block;
+    z-index: 100;
+    @include buttonShadow();
+    @include pc {
+      right: 5%;
+      top: 20%;
+      border: 1px solid $gold;
+      padding: 3rem 2.7rem;
+      border-radius: 50%;
+      display: block;
+      z-index: 100;
+      @include buttonShadow();
+    }
+  }
+}
+
+.arrow {
+  position: relative;
+  height: 2.6vw;
+  width: 4.2vw;
+  display: block;
+  background-color: $gold;
+  transform: rotate(-90deg);
+  bottom: -1vw;
+  @include pc {
+    position: relative;
+    height: 1.2rem;
+    width: 1.6rem;
+    display: block;
+    background-color: $gold;
+    transform: rotate(-90deg);
+    bottom: -0.7rem;
+    @include buttonShadow();
+  }
+}
+.arrow::before {
+  position: absolute;
+  content: "";
+  border: solid 4vw transparent;
+  border-left: solid 3vw $gold;
+  top: -2.8vw;
+  left: 4vw;
+  @include pc {
+    position: absolute;
+    content: "";
+    border: solid 1.6rem transparent;
+    border-left: solid 1.6rem $gold;
+    top: -1rem;
+    left: 1.6rem;
+  }
+}

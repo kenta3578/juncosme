@@ -1,0 +1,27 @@
+doctype html
+- const url = "index"
+- const html =""
+
+html(lang='ja')
+  head
+    meta(charset='utf-8')
+    -
+      $imgPath = './assets/images/'
+      $selfURL = 'https://jun-cosme.net/'
+    include include/_head.pug
+    include include/_script.pug
+  body.main
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v3.3"></script>
+    .l-Wrapper
+      include include/_header.pug
+      .l-Content
+        .l-Main
+          main
+            include section/_TOP_HERO.pug
+            include section/_TOP_MESSAGE.pug
+            include section/_TOP_SERVICE.pug
+            include section/_TOP_COMPANY.pug
+            include section/_EVENT_POP.pug
+            include section/_CONTACT.pug
+      include include/_footer.pug

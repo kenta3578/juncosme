@@ -1,0 +1,150 @@
+@import "../foundation/_color.scss";
+
+/* z-index */
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+@mixin baseTransion {
+  transition: 0.3s;
+}
+
+@mixin buttonShadow($shadowColor: $shadow) {
+  box-shadow: 0 0 0.2rem $shadowColor;
+  @include pc {
+    box-shadow: 0px 0 0.2rem $shadowColor;
+  }
+}
+@mixin bgBase($repeat: no-repeat, $size: cover, $position: center) {
+  background-repeat: $repeat;
+  background-size: $size;
+  background-position: $position;
+}
+@mixin border() {
+  border: 0.1rem solid $light-gray;
+}
+
+@mixin letterShadow($shadowColor: $shadow) {
+  text-shadow: 0 0 0.2rem $shadowColor;
+  @include pc {
+    text-shadow: 0 0 0.2rem $shadowColor;
+  }
+}
+@mixin letterDifineShadow($shadowColor: $shadow) {
+  text-shadow: 0 0 0.2rem $shadowColor;
+}
+
+// レスポンシブ対応
+$imgpath-pc: "/images/";
+$imgpath-sp: "/images/sp/";
+$pc: 769px; // PC769
+$tab: 840px; // TAB
+$sp: 768px; // SP
+
+//
+@mixin pc {
+  @media (min-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+// vw算出
+// 第一引数で基準となる画面幅のフォントサイズ、第二引数で基準となる画面幅を入力
+@function get_vw($size, $viewport: 375) {
+  $rate: 100 / $viewport;
+
+  @return $rate * $size * 1vw;
+}
+
+@mixin fz_vw($font_size: 10) {
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size);
+}
+
+@mixin wi_vw($width) {
+  width: get_vw($width);
+}
+
+@function get_vh($size, $viewport: 667) {
+  $rate: 100 / $viewport;
+
+  @return $rate * $size * 1vh;
+}
+
+@mixin ellipsisML($fontSize, $lineHeight, $height, $BGColor) {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: $height;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+
+  &::before,
+  &::after {
+    position: absolute;
+    background: $BGColor;
+  }
+
+  &::before {
+    content: "…";
+    right: 0;
+    bottom: 0;
+    width: 2em;
+    text-align: right;
+    background: -moz-linear-gradient(left, rgba($BGColor, 0) 0%, rgba($BGColor, 1) 40%, rgba($BGColor, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba($BGColor, 0) 0%, rgba($BGColor, 1) 40%, rgba($BGColor, 1) 100%);
+    background: linear-gradient(to right, rgba($BGColor, 0) 0%, rgba($BGColor, 1) 40%, rgba($BGColor, 1) 100%);
+  }
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@mixin gridTmpRows($str) {
+  -ms-grid-rows: $str;
+  grid-template-rows: $str;
+}
+
+@mixin gridTmpCols($str) {
+  -ms-grid-columns: $str;
+  grid-template-columns: $str;
+}
+
+@mixin gridRow($start, $end) {
+  -ms-grid-row: $start;
+  -ms-grid-row-span: $end - $start;
+  grid-row: unquote($start + " / " + $end);
+}
+
+@mixin gridCol($start, $end) {
+  -ms-grid-column: $start;
+  -ms-grid-column-span: $end - $start;
+  grid-column: unquote($start + " / " + $end);
+}
+
+@mixin gridAlignCol($str) {
+  -ms-grid-column-align: $str;
+  align-self: $str;
+}
+
+// animation
+$ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);

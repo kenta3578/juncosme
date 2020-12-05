@@ -1,0 +1,76 @@
+@import "../foundation/_mixin.scss";
+.rental {
+  background-color: #fff;
+  padding-bottom: 12vw;
+  padding-top: 4vw;
+  @include pc {
+    padding: 8rem auto;
+  }
+
+  &__Inner {
+    width: 90%;
+    padding: 12vw 0;
+    margin: 0 auto;
+    @include pc {
+      padding: 8rem auto;
+    }
+  }
+  &__Message {
+    width: 85%;
+    margin: 0 auto;
+    margin: 3vw auto;
+    @include pc {
+      margin: 2rem auto;
+      width: 40%;
+    }
+  }
+
+  &__Img {
+    margin-bottom: 8vw;
+
+    @include pc {
+      margin: 0;
+      height: 25rem;
+    }
+  }
+  &__Box {
+    @include pc {
+      display: flex;
+      width: 80%;
+      margin: 0 auto;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    &:nth-of-type(1) {
+      .rental__Img {
+        @include pc {
+          order: 1;
+        }
+      }
+      .rental__Message {
+        @include pc {
+          order: 2;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      .rental__Img {
+        @include pc {
+          order: 2;
+        }
+      }
+      .rental__Message {
+        @include pc {
+          order: 1;
+        }
+      }
+    }
+  }
+}
+.rental .rental__Img:last-of-type {
+  margin: 8vw 0;
+  @include pc {
+    margin: 4rem auto;
+  }
+}

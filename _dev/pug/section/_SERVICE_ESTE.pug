@@ -1,0 +1,59 @@
+.c-sectionBetween.c-sectionBetween-heart.c-sectionBetween-Sub.c-sectionBetween-Service
+  .bredList
+    a.bredList__Link(href=`index${html}`) トップページ
+    |＞
+    p.bredList__Now サービス
+  h1.subMain__Title サービス
+.serviceMain.c-section.mt-11vw
+  section.este#este.js-animation
+    h2.c-section__Title.pt-25vw.c-subSection エステ
+    img.c-section__Title-Img(src="assets/images/g-line.svg" alt="")
+    p.este__Message 当店ではエステを行なっております。
+      br
+      |以下にてメニューをご覧いただけます。
+
+    ul.este__Lists
+      -
+        const showesteData = [
+        {
+          title:"ヘッド<br>マッサージ",
+          img:"head.jpg",
+          className: "headMassage",
+          desk:"頭のコリをほぐします。<br>眼精疲労、お肌のたるみに効果的です。",
+          course:"●料金 2000円(20分)",
+        },
+        {
+        title:"肩マッサージ",
+          img:"sholder.jpg",
+          className: "sholderMassage",
+          desk:"肩、リンパをほぐします。肩の血行が良くなると、お肌の質も良くなります。",
+          course:"●料金 2500円(20分)",
+        },
+        {
+          title:"ヘナカラー",
+          img:"service_hena.jpg",
+          className: "henaColor",
+          desk:"ヘナカラーをします。植物を原材料とした染色で、頭皮に優しい染色方法です。",
+          course:`●料金 2500円　(ヘナ粉持参の場合2000円)`,
+        },
+        {
+          title:"カラー<br>コーディネート",
+          img:"service_ora.jpg",
+          className: "colorCode",
+          desk:"「オーラソーマ」診断によってお客様に合う「色」診断させていただきます。",
+          course:`●料金 5000円(「色」を元にしたメイクアップ込み)
+          <br>●オーラソーマのみ 3000円`,
+        },
+        ]
+      each item in showesteData
+          li.este__List
+            .este__ListInner
+              .este__Img(class=`este__Img-${item.className}`)
+                h3.este__Title(class=`este__Title-${item.className}`) !{item.title}
+              .este__DescBox
+                p.este__Desc !{item.desk}
+                p.este__Course !{item.course}
+    a.c-moreButton(href="#contact") ご予約はこちらから
+      br
+      |(お問い合わせへ)
+

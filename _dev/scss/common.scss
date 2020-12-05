@@ -1,0 +1,447 @@
+@charset "utf-8";
+@import "foundation/_mixin.scss";
+@import "foundation/_color.scss";
+@import "reset/_reset.scss";
+@import "project/**";
+@import "utility.scss";
+
+// 共通設定
+
+html {
+  height: 100%;
+  font-family: "Noto Serif JP", serif;
+
+  @include tab {
+    font-size: 55.5%;
+  }
+  @include pc {
+    font-size: 62.5%;
+  }
+  @include sp {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  background: #fdfcf5;
+  position: relative;
+  font-size: get_vw(14);
+  color: #535350;
+  @include pc {
+    font-size: 1.6rem;
+  }
+}
+
+p {
+  line-height: 1.75;
+}
+
+p {
+  width: 100%;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.2s;
+  &:hover {
+    opacity: 0.7;
+  }
+  &:visited {
+    color: #fff;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+li,
+ul {
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.l-Wrapper {
+  overflow-x: hidden;
+  max-width: 150rem;
+  margin: 0 auto;
+  background: #fdfcf5;
+}
+///////@at-root
+.c-section__Inner {
+  padding: 11vw 0;
+  @include pc {
+    padding: 0;
+    min-width: 57rem;
+  }
+}
+.c-section {
+  @include pc {
+    padding-top: 8rem;
+    margin-left: 17rem;
+    box-shadow: 0px 0.1rem 0.1rem $light-gray;
+  }
+  &__Title {
+    font-weight: bold;
+    text-align: center;
+    font-size: get_vw(28);
+    margin-bottom: 4vw;
+    color: $font;
+    line-height: 1.4;
+    @include pc {
+      font-size: 3.6rem;
+      margin-bottom: 1.6rem;
+    }
+    &-Img {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 13vw;
+      width: 45vw;
+      @include pc {
+        margin-bottom: 4rem;
+        width: 18%;
+      }
+    }
+  }
+}
+
+.subMain__Title {
+  font-size: get_vw(32);
+  text-align: center;
+  position: relative;
+  @include pc {
+    font-size: 4.8rem;
+  }
+}
+
+.bredList {
+  color: $light-gray;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 13vw;
+  width: 90%;
+  margin-bottom: 13vw;
+  margin-bottom: 6vw;
+  font-size: get_vw(12);
+  position: relative;
+  @include pc {
+    font-size: 1.6rem;
+    margin: 8rem 8rem 0;
+  }
+
+  &__Link {
+    margin-right: 1vw;
+    color: $light-gray;
+    &:visited {
+      color: $light-gray;
+    }
+  }
+  &__Now {
+    color: $font;
+    font-weight: bold;
+    margin-left: 1vw;
+    width: 50%;
+  }
+}
+
+.c-moreButton {
+  display: block;
+  text-align: center;
+  width: 75%;
+  font-size: get_vw(16);
+  min-width: 130px;
+  padding: 5vw 8vw;
+  border: 0.1rem solid $gold;
+  line-height: 1.4;
+  margin: 10vw auto 0;
+  color: #fff;
+  background-image: linear-gradient($gold 0%, $gold-back 100%);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px $gold-back;
+  &:active {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+  }
+  &:visited {
+    color: #fff;
+  }
+  @include pc {
+    font-size: 1.6rem;
+    width: 18rem;
+    padding: 2rem 3rem;
+    margin: 0 auto 2rem;
+    width: 30%;
+  }
+}
+
+.c-moreButton-t-Service {
+  @include pc {
+    width: 100%;
+  }
+}
+.service .serviceMain .c-moreButton {
+  width: 70%;
+  @include pc {
+    position: static;
+    width: 30%;
+    margin: 6rem auto 0px;
+  }
+}
+
+.service .c-moreButton {
+  width: 70%;
+}
+
+.c-clearFix {
+  &:after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+.c-popWindowOuter {
+  position: relative;
+  float: right;
+  margin: 12vw 0 0;
+  left: 5vw;
+  @include pc {
+    margin: 0;
+    left: 0;
+  }
+}
+.c-popWindow {
+  width: 34vw;
+  @include pc {
+    width: 14.5rem;
+  }
+}
+.c-faceBook__Outer {
+  text-align: center;
+  margin-top: 10vw;
+  @include pc {
+    width: 40rem;
+  }
+}
+.c-faceBook__Message {
+  position: absolute;
+  top: 20%;
+  left: -13%;
+  transform: rotate(25deg);
+  text-align: right;
+  font-weight: 900;
+  font-size: 3.75vw;
+  font-family: sans-serif;
+  @include pc {
+    font-size: 1.6rem;
+  }
+}
+
+.c-right {
+  display: inline-block;
+  color: $light-gray;
+  font-size: get_vw(24);
+  margin-left: 5vw;
+}
+
+.c-subSection {
+  margin-top: -23vw;
+  padding-top: 30vw;
+  @include pc {
+    margin-top: -10rem;
+    padding-top: 10rem;
+  }
+}
+
+.c-sectionBetween {
+  padding: 13vw 0;
+  position: relative;
+  background: #fdfcf5;
+  @include pc {
+    padding: 0;
+    margin-left: 17rem;
+    padding-bottom: 7rem;
+    z-index: 1;
+  }
+  &__direction {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    height: 15vw;
+    @include pc {
+      height: 5rem;
+      width: 35px;
+    }
+  }
+  &::after {
+    display: block;
+    content: "";
+    @include bgBase();
+    background-size: contain;
+    height: 50vw;
+    width: 50vw;
+    right: -20vw;
+    top: 10vw;
+    position: absolute;
+  }
+  &-clover {
+    &::after {
+      background-image: url("../images/clover-ling.svg");
+    }
+  }
+  &-leaf {
+    &::after {
+      background-image: url("../images/leaf-ling.svg");
+      @include pc {
+      }
+    }
+  }
+  &-heart {
+    &::after {
+      background-image: url("../images/heart-ling.svg");
+    }
+  }
+  &-Service {
+    background: #fdfcf5;
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #fdfcf5;
+      opacity: 0.7;
+      z-index: 0;
+    }
+    @include pc {
+      &:before {
+        opacity: 1;
+        background: none;
+      }
+    }
+  }
+  &-Company {
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #fdfcf5;
+      opacity: 0.7;
+      z-index: 0;
+    }
+  }
+}
+
+.subSection {
+  background-color: #fff;
+  padding-bottom: 12vw;
+  padding-top: 4vw;
+  @include pc {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+.section__Inner {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.c-sectionBetween-Sub {
+  &::after {
+    top: 0;
+  }
+  @include pc {
+    margin-left: 17rem;
+    &::after {
+      top: 0;
+      height: 20rem;
+      width: 87%;
+    }
+  }
+}
+
+.c-sectionBetween-Service-Sub {
+  padding: 11vw 0 17vw;
+}
+
+.cal_wrapper {
+  max-width: 960px; /* 最大幅 */
+  min-width: 280px; /* 最小幅 */
+  margin: 2.0833% auto;
+}
+.googlecal {
+  position: relative;
+  padding-bottom: 100%; /* 縦横比 */
+  height: 0;
+}
+.googlecal iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100%;
+}
+.chrome-all > h1 {
+  display: none;
+}
+/* 画面幅が768px以上の場合の縦横比の指定 */
+@media only screen and (min-width: 768px) {
+  .googlecal {
+    padding-bottom: 75%;
+  }
+}
+
+.mb-7vw {
+  margin-bottom: 7vw;
+}
+.mt-11vw {
+  padding-top: 11vw;
+  @include pc {
+    padding-top: 0px;
+  }
+}
+
+.pt-25vw {
+  padding-top: 25vw;
+}
+.pb-11vw {
+  padding-bottom: 11vw;
+}
+
+.js-animation {
+  @include pc {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(30px);
+    transition: all 0.7s;
+  }
+}
+.js-animation.is-show {
+  @include pc {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+  }
+}
+.bg-None::after {
+  @include pc {
+    background: none;
+  }
+}

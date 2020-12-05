@@ -1,0 +1,96 @@
+@import "../foundation/_mixin.scss";
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  @include pc {
+    height: 85vh;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background: url("../images/green_back.svg");
+    @include bgBase(no-repeat, cover, center);
+    height: 24%;
+    width: 100%;
+    top: -6vw;
+    transform: rotateX(180deg);
+    @include pc {
+      top: -18%;
+      height: 110%;
+      z-index: 1;
+    }
+  }
+
+  &__Inner-BackGround {
+    position: absolute;
+    top: 10vw;
+    height: 90vh;
+    width: 100%;
+    right: 6vw;
+    z-index: 10;
+    @include pc {
+      top: 10%;
+      right: 0;
+      display: none;
+    }
+  }
+  &__Inner {
+    position: relative;
+    top: 1%;
+    height: 100%;
+    background: url("../images/top2.png");
+    @include bgBase();
+    width: 100%;
+    margin: 0 auto;
+    background-size: cover;
+    left: 0%;
+    @include pc {
+      top: 7%;
+      left: 24%;
+      background-size: 70rem;
+    }
+  }
+
+  &__Title {
+    font-size: get_vw(28);
+    color: $rose;
+    @include letterDifineShadow;
+    left: 15vw;
+    position: relative;
+    top: 60%;
+    font-weight: bold;
+    @include pc {
+      font-size: 4rem;
+      top: 30%;
+      left: -6%;
+      width: 47rem;
+      letter-spacing: 0.5rem;
+    }
+    &-Img {
+      vertical-align: bottom;
+      margin-right: 2vw;
+      height: 10vw;
+      @include pc {
+        margin-left: 2rem;
+        height: 4rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+  &__Title-Bottom {
+    margin-left: 45vw;
+    line-height: 1.4;
+    @include pc {
+      margin-left: 26.5rem;
+    }
+  }
+  &__Title-Strong {
+    font-size: get_vw(38);
+    @include pc {
+      font-size: 6rem;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33.211" height="27.293" viewBox="0 0 33.211 27.293">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.799" y1="0.783" x2="0.334" y2="0.176" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#a2c8ca"/>
+      <stop offset="0.115" stop-color="#8ebdc1"/>
+      <stop offset="0.381" stop-color="#68a8b1"/>
+      <stop offset="0.626" stop-color="#4c98a4"/>
+      <stop offset="0.841" stop-color="#3b8f9d"/>
+      <stop offset="1" stop-color="#358c9b"/>
+    </linearGradient>
+  </defs>
+  <path id="blue_bird" data-name="blue bird" d="M300.932,136.667a6.157,6.157,0,0,0-3.617-1.479s-2.96-.329-4.111,2.137l-3.453.164,2.631,2.137s5.261,9.207,8.385,10.687c.658-.164.164.329,7.234.165l4.933,1.973,4.275.329,1.644-1.151-.822-2.8-6.577-2.137-1.315-.165,1.808-1.973,1.644-.822.658-1.809,8.714-8.549s-4.275-2.466-10.358.329l-3.289,3.453V125.487s-3.781.987-5.1,2.8C304.22,128.282,300.275,132.064,300.932,136.667Z" transform="translate(-289.752 -125.487)" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+</svg>

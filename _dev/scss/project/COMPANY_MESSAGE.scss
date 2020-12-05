@@ -1,0 +1,99 @@
+@import "../foundation/_mixin.scss";
+
+.companyMessage {
+  background: #fffe;
+  color: #fff;
+  @include pc {
+    padding: 8rem 0;
+  }
+  &__Title {
+    font-size: get_vw(32);
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    position: relative;
+    letter-spacing: 0.1em;
+    left: 10vw;
+    top: 10vw;
+    @include letterShadow;
+    @include pc {
+      font-size: 4rem;
+      left: 15%;
+      top: 10%;
+    }
+  }
+  &__Inner {
+    position: relative;
+    overflow: hidden;
+    height: 90vh;
+    background: url("../images/company_hero.jpg");
+    @include bgBase(no-repeat, cover, center);
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: $font;
+      opacity: 0.5;
+      z-index: 0;
+    }
+    @include pc {
+      width: 100%;
+      margin-top: 7rem;
+      background-size: 50%;
+      background-position: 0;
+      background: none;
+      height: 100vh;
+
+      &:before {
+        background: url("../images/company_hero.jpg");
+        @include bgBase(no-repeat, cover, center);
+        opacity: 1;
+        width: 60%;
+      }
+    }
+  }
+  &__InnerBox {
+    @include pc {
+      position: relative;
+      left: 60%;
+      background: $gold;
+      z-index: -1;
+      background: #b19d68;
+      width: 40%;
+      height: 100%;
+    }
+  }
+  &__DescBox {
+    position: absolute;
+    top: 33%;
+    width: 66%;
+    right: 0%;
+  }
+  &__Desc {
+    text-align: left;
+    position: relative;
+    @include letterShadow;
+    margin-bottom: 4vw;
+    @include pc {
+      margin-bottom: 4rem;
+    }
+    &-Define {
+      color: $yellow;
+    }
+  }
+}
+
+.c-colorYellow {
+  color: $yellow;
+}
+.c-colorRose {
+  font-size: get_vw(28);
+  color: $rose;
+  position: relative;
+  bottom: 7vw;
+  left: 35vw;
+}

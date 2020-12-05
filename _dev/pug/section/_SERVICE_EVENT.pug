@@ -1,0 +1,49 @@
+
+.serviceMain.c-section
+  section.event.js-animation
+    h2.c-section__Title#event.c-subSection イベント
+    img.c-section__Title-Img(src="assets/images/g-line.svg" alt="")
+    img.event__Img(src="assets/images/service_event.jpg" alt="")
+    p.event__Message 当店では定期的に美容目的のイベントや
+      br
+      | 音楽ライブ、書道教室、親と子の関わり方教室といったセミナーも開催しております。
+      br
+      | イベント内容は以下のリンクからご覧いただきます。
+      br
+      |不定期に開催しておりますので、日程だけでもお気軽にお問い合わせください。
+    ul.event__Lists
+      -
+        const showeventData = [
+        {
+          title:`ヨガ教室`,
+          img:"henaColor.png",
+          className: "yoga",
+          dataIndex: 3,
+        },
+        {
+        title:`メイクアップショー`,
+          img:"service_event.jpg",
+          className: "makeshow",
+          dataIndex: 0,
+        },
+        {
+        title:`メイク教室`,
+          img:"service_makeup.jpg",
+          className: "makeclass",
+          dataIndex: 1,
+        },
+        {
+        title:`親と子の関わり方教室`,
+          img:"service_makeup.jpg",
+          className: "parentChild",
+          dataIndex: 2,
+        },
+        ]
+      each item in showeventData
+          li.event__ListLink.js-Pop(class=`event__ListLink-${item.className}`,data-index=`${item.dataIndex}`)
+            a.event__List
+            h3.event__Title(class=`event__Title-${item.className}`) !{item.title}
+    a.c-moreButton(href="Contact") ご連絡はこちらから
+      br
+      |(お問い合わせへ)
+

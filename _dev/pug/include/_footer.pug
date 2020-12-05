@@ -1,0 +1,29 @@
+footer.footer
+  .footer__outer
+    a.footer__title(href=`index${html}`)
+      img.footer__title-Img(src="./assets/images/icon_clover.svg" ,alt="",)
+      |JUN COSME
+      span.footer__TitleBottom  HOUSE
+    ul.footer__inner
+      -
+        var footerLinkData	=	[{
+              linkTitle: "TOP",
+              Link: `index${html}#hero`,
+              },{
+              linkTitle: "サービス",
+              Link: `service${html}`,
+              },{
+              linkTitle: "当店について",
+              Link: `company${html}`,
+              },{
+              linkTitle: "お問い合わせ",
+              Link: "#Contact",
+
+              }
+            ]
+      each item in footerLinkData
+        li.footer__dataLinks
+          a.footer__dataTitle(href=item.Link) #{item.linkTitle}
+    small.footer__copyRight © ジュン・コスメハウス
+      br
+      |all right reserved.

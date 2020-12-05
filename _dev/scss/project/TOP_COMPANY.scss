@@ -1,0 +1,65 @@
+@charset "utf-8";
+@import "../foundation/_mixin.scss";
+.company {
+  background-color: #fff;
+  @include pc {
+    padding-top: 0 !important;
+  }
+  &__Inner {
+    width: 85%;
+    padding: 12vw 0;
+    margin: 0 auto;
+    @include pc {
+      width: 85%;
+      padding-top: 8rem !important;
+    }
+  }
+  &__Box {
+    @include pc {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      width: 95%;
+    }
+    &:nth-of-type(2) {
+      .company__Img {
+        @include pc {
+          order: 2;
+        }
+      }
+      .company__Desc {
+        @include pc {
+          order: 1;
+        }
+      }
+    }
+  }
+  &__Img {
+    width: 100%;
+    margin: 10vw auto;
+    display: block;
+    border: 1px solid $gold;
+    @include pc {
+      margin: 3rem;
+      display: inline-block;
+      width: 40%;
+      vertical-align: middle;
+      height: 40%;
+    }
+  }
+  &__Desc {
+    @include pc {
+      display: inline-block;
+      width: 40%;
+      vertical-align: middle;
+    }
+  }
+  .c-moreButton {
+    @include pc {
+      width: 30%;
+      margin: 8rem auto 0;
+    }
+  }
+}
