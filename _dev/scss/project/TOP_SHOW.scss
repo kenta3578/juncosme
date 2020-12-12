@@ -1,0 +1,83 @@
+@charset "utf-8";
+@import "../foundation/_mixin.scss";
+
+.show {
+  background-color: #fff;
+  padding: 3rem 0 0;
+
+  @include pc {
+    overflow-x: scroll;
+  }
+
+  &__Inner {
+    width: 85%;
+    padding: 12vw 0 0;
+    margin: 0 auto;
+
+    @include pc {
+      width: 77%;
+    }
+  }
+
+
+
+  &__video {
+    @include sp {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+    }
+  }
+
+  &__video iframe {
+    @include sp {
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+
+
+
+  &__Desc {
+    margin: 0 auto;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    width: auto;
+    text-align: left;
+
+    @include pc {
+      margin-top: 4rem;
+      font-size: 1.8rem;
+    }
+
+  }
+
+  &__Notice {
+    margin-top: 2rem;
+    display: block;
+
+  }
+
+  &__Img {
+    max-width: 100%;
+    max-height: 420px;
+  }
+
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+  width: 20px;
+  height: 32.58px;
+  fill: #666;
+  stroke: none;
+  stroke-width: 0;
+  background-image: none;
+  z-index: 10000;
+}

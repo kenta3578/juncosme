@@ -11,7 +11,7 @@
     "eslintfix": "eslint javascripts/*.js --fix",
     "imgmin": "gulp imgmin",
     "dev": "webpack --mode development --module-bind 'js=babel-loader'",
-    "build": "webpack --mode production --module-bind 'js=babel-loader'"
+    "deploy": "webpack --mode production --module-bind 'js=babel-loader' && firebase deploy --only hosting"
   },
   "resolutions": {
     "stylelint": "8.3.0"

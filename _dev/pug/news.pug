@@ -5,13 +5,14 @@ doctype html
 
 html(lang='ja')
   head
-    meta(charset='utf-8')
     -
       $imgPath = './assets/images/'
       $selfURL = 'https://jun-cosme.net/news.html'
       $corpURL = 'https://example.com'
       $entryURL = 'https://example.com'
       $list2018URL = 'https://example.com'
+    meta(charset='utf-8')
+    meta(rel="canonical" href=$selfURL)
     include include/_head.pug
     include include/_script.pug
   body.news

@@ -3,10 +3,11 @@ doctype html
 - const html =".html"
 html(lang='ja')
   head
-    meta(charset='utf-8')
     -
       $imgPath = './assets/images/'
       $selfURL = 'https://jun-cosme.net/company.html'
+    meta(rel="canonical" href=$selfURL)
+    meta(charset='utf-8')
     include include/_head.pug
     include include/_script.pug
   body.company

@@ -4,10 +4,11 @@ doctype html
 
 html(lang='ja')
   head
-    meta(charset='utf-8')
     -
       $imgPath = './assets/images/'
       $selfURL = 'https://jun-cosme.net/'
+    meta(charset='utf-8')
+    meta(rel="canonical" href=$selfURL)
     include include/_head.pug
     include include/_script.pug
   body.main
@@ -19,9 +20,11 @@ html(lang='ja')
         .l-Main
           main
             include section/_TOP_HERO.pug
-            include section/_TOP_MESSAGE.pug
+            include section/_TOP_VIDEO.pug
+            include section/_TOP_SHOW.pug
             include section/_TOP_SERVICE.pug
             include section/_TOP_COMPANY.pug
             include section/_EVENT_POP.pug
+            include section/_COMPANY_PRESIDENT.pug
             include section/_CONTACT.pug
       include include/_footer.pug

@@ -10,13 +10,13 @@ export function toggleMenu(windowWidth) {
     headerScrollChange();
   }
   // トグルボタンによる制御
-  toggleButton.addEventListener("click", function(ev) {
+  toggleButton.addEventListener("click", function (ev) {
     ev.preventDefault();
     toggleWindow.classList.toggle("toggleShowAnime");
     this.classList.toggle("active");
     headerButtonChange();
   });
-  $toggleClsLink.click(function() {
+  $toggleClsLink.click(function () {
     toggleWindow.classList.toggle("toggleShowAnime");
     headerColorOnContents();
     toggleButton.classList.toggle("active");
@@ -39,8 +39,9 @@ export function toggleMenu(windowWidth) {
       headerColorOnContents();
     }
   }
+
   function headerScrollChange() {
-    jQuery(window).scroll(function() {
+    jQuery(window).scroll(function () {
       // スクロール毎にイベントが発火します。
       let windowYOffset = jQuery(document).scrollTop();
       if (
@@ -65,10 +66,12 @@ export function toggleMenu(windowWidth) {
     headerTitle.classList.add("header__Title-OnToggle");
     header.classList.add("header-OnToggle");
   }
+
   function headerColorOnTop() {
     headerTitle.classList.remove("header__Title-OnToggle");
     header.classList.remove("header-OnToggle");
   }
+
   function headerColorOnContents() {
     headerTitle.classList.remove("header__Title-OnToggle");
     header.classList.remove("header-OnToggle");
@@ -76,9 +79,11 @@ export function toggleMenu(windowWidth) {
     headerTitle.classList.add("header__Title-OnContens");
     toggleButton.classList.add("menuButton-OnContents");
   }
+
   function toggleColor() {
     toggleButton.classList.remove("menuButton-OnContents");
   }
+
   function hideHeader() {
     header.classList.remove("header-OnContens");
     headerTitle.classList.remove("header__Title-OnContens");

@@ -1,0 +1,40 @@
+[debug] [2020-12-12T10:01:35.340Z] ----------------------------------------------------------------------
+[debug] [2020-12-12T10:01:35.342Z] Command:       /Users/izawakentarou/.nodebrew/node/v10.17.0/bin/node /Users/izawakentarou/.npm-global/bin/firebase deploy --only hosting
+[debug] [2020-12-12T10:01:35.342Z] CLI Version:   8.16.2
+[debug] [2020-12-12T10:01:35.343Z] Platform:      darwin
+[debug] [2020-12-12T10:01:35.343Z] Node Version:  v10.17.0
+[debug] [2020-12-12T10:01:35.343Z] Time:          Sat Dec 12 2020 19:01:35 GMT+0900 (GMT+09:00)
+[debug] [2020-12-12T10:01:35.344Z] ----------------------------------------------------------------------
+[debug] [2020-12-12T10:01:35.344Z] 
+[debug] [2020-12-12T10:01:35.347Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2020-12-12T10:01:35.380Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-12T10:01:35.380Z] > authorizing via signed-in user
+[debug] [2020-12-12T10:01:35.381Z] [iam] checking project juncosme for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-12-12T10:01:35.383Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-12-12T10:01:35.383Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-12-12T10:01:35.691Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sat, 12 Dec 2020 10:01:35 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-12T10:01:35.707Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/juncosme:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-12-12T10:01:35.940Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2020-12-12T10:01:35.940Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2020-12-12T10:01:36.678Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 12 Dec 2020 10:01:36 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=590","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-12T10:01:36.680Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/juncosme  
+ 
+[debug] [2020-12-12T10:01:37.392Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 12 Dec 2020 10:01:37 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'juncosme'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-12-12T10:01:37.400Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/juncosme/versions  
+ {"config":{"rewrites":[{"glob":"/company","path":"/company.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-12-12T10:01:38.933Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 12 Dec 2020 10:01:38 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[juncosme]: beginning deploy... 
+[info] i  hosting[juncosme]: found 99 files in dest 
+[debug] [2020-12-12T10:01:39.367Z] [hosting] hash cache [ZGVzdA] stored for 99 files
+[debug] [2020-12-12T10:01:39.367Z] [hosting][hash queue][FINAL] {"max":355,"min":0,"avg":39.56565656565655,"active":0,"complete":99,"success":99,"errored":0,"retried":0,"total":99,"elapsed":398}
+[debug] [2020-12-12T10:01:39.368Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/juncosme/versions/bc1cb17592dfd0c0:populateFiles  
+ <request body omitted>
+[debug] [2020-12-12T10:01:40.628Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 12 Dec 2020 10:01:40 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-12T10:01:40.638Z] [hosting][populate queue][FINAL] {"max":1264,"min":1264,"avg":1264,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1273}
+[debug] [2020-12-12T10:01:40.638Z] [hosting] uploads queued: 17

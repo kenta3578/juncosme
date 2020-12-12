@@ -1,9 +1,12 @@
 @import "../foundation/_mixin.scss";
 
 .message {
-  padding-top: 0 !important;
+  padding: 12vw 0 0;
+  background: #fff;
+
   &:before {
     display: none;
+
     @include pc {
       content: "";
       display: inline-block;
@@ -15,6 +18,7 @@
       background: $rose-back;
     }
   }
+
   &__Title {
     font-size: get_vw(32);
     -webkit-writing-mode: vertical-rl;
@@ -25,6 +29,7 @@
     left: 10vw;
     top: 10vw;
     @include letterShadow;
+
     @include pc {
       margin-top: 0px;
       font-size: 4rem;
@@ -40,12 +45,14 @@
     height: 100vh;
     @include bgBase(no-repeat, cover, center);
     color: #fff;
+
     @include pc {
       background: none;
       width: 100%;
       height: 80rem;
       position: relative;
     }
+
     &:before {
       content: "";
       display: block;
@@ -70,8 +77,10 @@
       }
     }
   }
+
   &__InnerBox {
     color: #fff;
+
     @include pc {
       position: relative;
       width: 49%;
@@ -88,24 +97,30 @@
     left: 19vw;
     line-height: 1.5;
     @include letterShadow;
+
     @include pc {
       margin-top: 20rem;
       font-size: 2.4rem;
       left: 0;
       text-align: center;
     }
+
     &-fontM {
       font-size: get_vw(28);
+
       @include pc {
         font-size: 2.8rem;
       }
     }
+
     &-fontL {
       font-size: get_vw(32);
+
       @include pc {
         font-size: 3.2rem;
       }
     }
+
     &-Bottom {
       text-align: center;
       display: block;
@@ -114,6 +129,7 @@
       position: relative;
       bottom: 8vw;
       @include letterShadow;
+
       @include pc {
         font-size: 2.4rem;
         bottom: 0;
@@ -127,6 +143,7 @@
 .c-colorYellow {
   color: $yellow;
 }
+
 .c-colorRose {
   font-size: get_vw(28);
   color: $rose;
@@ -134,6 +151,7 @@
   position: relative;
   bottom: 0;
   left: 35vw;
+
   @include pc {
     width: 50%;
     margin: 0 auto;

@@ -33,7 +33,7 @@ module.exports = {
     cacheLocation: ".css-cache",
 
     watch: {
-      pug: ["./pug/**/*.pug"],
+      pug: ["./pug/**/*.pug", "./pug/**/_*.pug"],
       ejs: ["./ejs/**/*.ejs"],
       scss: ["./scss/**/*.scss"],
       stylus: ["./stylus/**/*.styl"],
