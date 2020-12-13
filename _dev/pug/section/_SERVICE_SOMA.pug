@@ -1,0 +1,33 @@
+
+.serviceMain.c-section
+  section.ivy.js-animation
+    h2.c-section__Title.pt-25vw.c-subSection カラーコーディネート
+    img.c-section__Title-Img(src="assets/images/g-line.svg" alt="")
+    p.este__Message
+      br
+      |以下にてメニューをご覧いただけます。
+
+    ul.este__Lists
+      -
+        const somaData = [
+        {
+          title:"カラーコーディネート",
+          img:"service_ora.jpg",
+          className: "colorCode",
+          desk:"カラーコーディネートを行います。",
+          course:`●費用 5,000円　`,
+        },
+        ]
+      each item in somaData
+          li.este__List
+            .este__ListInner
+              .este__Img(class=`este__Img-${item.className}`)
+                h3.este__Title(class=`este__Title-${item.className}`) !{item.title}
+              .este__DescBox
+                p.este__Desc !{item.desk}
+                p.este__Course !{item.time}
+                p.este__Course !{item.course}
+    a.c-moreButton(href="#contact") ご予約はこちらから
+      br
+      |(お問い合わせへ)
+

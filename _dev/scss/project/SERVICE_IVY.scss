@@ -1,18 +1,21 @@
 @import "../foundation/_mixin.scss";
+
 .ivy {
   background-color: #fff;
-  padding-bottom: 12vw;
+  padding-bottom: 4vw;
   padding-top: 4vw;
 
   &__Inner {
     width: 90%;
     padding: 12vw 0;
     margin: 0 auto;
+
     @include pc {
       padding: 8rem 0;
       width: 75%;
     }
   }
+
   &__Message {
     width: 85%;
     margin: 0 auto;
@@ -27,6 +30,7 @@
   &__Img {
     margin-bottom: 8vw;
     border: 1px solid $gold;
+
     @include pc {
       margin: 6rem auto;
       width: 50%;

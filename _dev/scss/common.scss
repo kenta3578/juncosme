@@ -14,9 +14,11 @@ html {
   @include tab {
     font-size: 55.5%;
   }
+
   @include pc {
     font-size: 62.5%;
   }
+
   @include sp {
     font-size: 62.5%;
   }
@@ -28,6 +30,7 @@ body {
   position: relative;
   font-size: get_vw(14);
   color: #535350;
+
   @include pc {
     font-size: 1.6rem;
   }
@@ -40,6 +43,7 @@ p {
 p {
   width: 100%;
 }
+
 *,
 *::after,
 *::before {
@@ -50,9 +54,11 @@ a {
   cursor: pointer;
   text-decoration: none;
   transition: 0.2s;
+
   &:hover {
     opacity: 0.7;
   }
+
   &:visited {
     color: #fff;
   }
@@ -75,20 +81,24 @@ ul {
   margin: 0 auto;
   background: #fdfcf5;
 }
+
 ///////@at-root
 .c-section__Inner {
   padding: 11vw 0;
+
   @include pc {
     padding: 0;
     min-width: 57rem;
   }
 }
+
 .c-section {
   @include pc {
     padding-top: 8rem;
     margin-left: 17rem;
     box-shadow: 0px 0.1rem 0.1rem $light-gray;
   }
+
   &__Title {
     font-weight: bold;
     text-align: center;
@@ -96,18 +106,21 @@ ul {
     margin-bottom: 4vw;
     color: $font;
     line-height: 1.4;
+
     @include pc {
       font-size: 3.6rem;
       margin-bottom: 1.6rem;
     }
+
     &-Img {
       display: block;
       margin: 0 auto;
       text-align: center;
-      margin-bottom: 13vw;
+      margin-bottom: 8vw;
       width: 45vw;
+
       @include pc {
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
         width: 18%;
       }
     }
@@ -118,6 +131,7 @@ ul {
   font-size: get_vw(32);
   text-align: center;
   position: relative;
+
   @include pc {
     font-size: 4.8rem;
   }
@@ -134,6 +148,7 @@ ul {
   margin-bottom: 6vw;
   font-size: get_vw(12);
   position: relative;
+
   @include pc {
     font-size: 1.6rem;
     margin: 8rem 8rem 0;
@@ -142,10 +157,12 @@ ul {
   &__Link {
     margin-right: 1vw;
     color: $light-gray;
+
     &:visited {
       color: $light-gray;
     }
   }
+
   &__Now {
     color: $font;
     font-weight: bold;
@@ -168,15 +185,18 @@ ul {
   background-image: linear-gradient($gold 0%, $gold-back 100%);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
   border-bottom: solid 3px $gold-back;
+
   &:active {
     -webkit-transform: translateY(4px);
     transform: translateY(4px);
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
     border-bottom: none;
   }
+
   &:visited {
     color: #fff;
   }
+
   @include pc {
     font-size: 1.6rem;
     width: 18rem;
@@ -191,8 +211,10 @@ ul {
     width: 100%;
   }
 }
+
 .service .serviceMain .c-moreButton {
   width: 70%;
+
   @include pc {
     position: static;
     width: 30%;
@@ -211,29 +233,36 @@ ul {
     clear: both;
   }
 }
+
 .c-popWindowOuter {
   position: relative;
   float: right;
   margin: 12vw 0 0;
   left: 5vw;
+
   @include pc {
     margin: 0;
     left: 0;
   }
 }
+
 .c-popWindow {
   width: 34vw;
+
   @include pc {
     width: 14.5rem;
   }
 }
+
 .c-faceBook__Outer {
   text-align: center;
   margin-top: 10vw;
+
   @include pc {
     width: 40rem;
   }
 }
+
 .c-faceBook__Message {
   position: absolute;
   top: 20%;
@@ -243,6 +272,7 @@ ul {
   font-weight: 900;
   font-size: 3.75vw;
   font-family: sans-serif;
+
   @include pc {
     font-size: 1.6rem;
   }
@@ -258,6 +288,7 @@ ul {
 .c-subSection {
   margin-top: -23vw;
   padding-top: 30vw;
+
   @include pc {
     margin-top: -10rem;
     padding-top: 10rem;
@@ -268,22 +299,26 @@ ul {
   padding: 13vw 0;
   position: relative;
   background: #fdfcf5;
+
   @include pc {
     padding: 0;
     margin-left: 17rem;
     padding-bottom: 7rem;
     z-index: 1;
   }
+
   &__direction {
     text-align: center;
     display: block;
     margin: 0 auto;
     height: 15vw;
+
     @include pc {
       height: 5rem;
       width: 35px;
     }
   }
+
   &::after {
     display: block;
     content: "";
@@ -295,25 +330,30 @@ ul {
     top: 10vw;
     position: absolute;
   }
+
   &-clover {
     &::after {
       background-image: url("../images/clover-ling.svg");
     }
   }
+
   &-leaf {
     &::after {
       background-image: url("../images/leaf-ling.svg");
-      @include pc {
-      }
+
+      @include pc {}
     }
   }
+
   &-heart {
     &::after {
       background-image: url("../images/heart-ling.svg");
     }
   }
+
   &-Service {
     background: #fdfcf5;
+
     &::before {
       display: block;
       content: "";
@@ -326,6 +366,7 @@ ul {
       opacity: 0.7;
       z-index: 0;
     }
+
     @include pc {
       &:before {
         opacity: 1;
@@ -333,6 +374,7 @@ ul {
       }
     }
   }
+
   &-Company {
     &:before {
       display: block;
@@ -353,11 +395,13 @@ ul {
   background-color: #fff;
   padding-bottom: 12vw;
   padding-top: 4vw;
+
   @include pc {
     padding-top: 8rem;
     padding-bottom: 8rem;
   }
 }
+
 .section__Inner {
   width: 85%;
   margin: 0 auto;
@@ -367,8 +411,10 @@ ul {
   &::after {
     top: 0;
   }
+
   @include pc {
     margin-left: 17rem;
+
     &::after {
       top: 0;
       height: 20rem;
@@ -382,15 +428,20 @@ ul {
 }
 
 .cal_wrapper {
-  max-width: 960px; /* 最大幅 */
-  min-width: 280px; /* 最小幅 */
+  max-width: 960px;
+  /* 最大幅 */
+  min-width: 280px;
+  /* 最小幅 */
   margin: 2.0833% auto;
 }
+
 .googlecal {
   position: relative;
-  padding-bottom: 100%; /* 縦横比 */
+  padding-bottom: 100%;
+  /* 縦横比 */
   height: 0;
 }
+
 .googlecal iframe {
   position: absolute;
   top: 0;
@@ -398,9 +449,11 @@ ul {
   width: 100% !important;
   height: 100%;
 }
-.chrome-all > h1 {
+
+.chrome-all>h1 {
   display: none;
 }
+
 /* 画面幅が768px以上の場合の縦横比の指定 */
 @media only screen and (min-width: 768px) {
   .googlecal {
@@ -411,8 +464,10 @@ ul {
 .mb-7vw {
   margin-bottom: 7vw;
 }
+
 .mt-11vw {
   padding-top: 11vw;
+
   @include pc {
     padding-top: 0px;
   }
@@ -421,6 +476,7 @@ ul {
 .pt-25vw {
   padding-top: 25vw;
 }
+
 .pb-11vw {
   padding-bottom: 11vw;
 }
@@ -433,6 +489,7 @@ ul {
     transition: all 0.7s;
   }
 }
+
 .js-animation.is-show {
   @include pc {
     opacity: 1;
@@ -440,8 +497,39 @@ ul {
     transform: translateX(0px);
   }
 }
+
 .bg-None::after {
   @include pc {
     background: none;
+  }
+}
+
+
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 20px;
+
+  @include pc {
+    margin-top: 32px;
+  }
+}
+
+.swiper-pagination-bullet {
+  display: inline-block;
+  width: 8px !important;
+  height: 8px !important;
+
+  @include pc {
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  &+& {
+    margin-left: 8px;
+
+    @include pc {
+      margin-left: 12px;
+    }
   }
 }

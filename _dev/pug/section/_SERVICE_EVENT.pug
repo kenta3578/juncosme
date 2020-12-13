@@ -1,49 +1,50 @@
 
-.serviceMain.c-section
-  section.event.js-animation
-    h2.c-section__Title#event.c-subSection イベント
+.serviceMain.c-section#event
+  section.ivy.js-animation
+    h2.c-section__Title.pt-25vw.c-subSection イベント
     img.c-section__Title-Img(src="assets/images/g-line.svg" alt="")
-    img.event__Img(src="assets/images/service_event.jpg" alt="")
-    p.event__Message 当店では定期的に美容目的のイベントや
+    p.este__Message 当店では定期的にイベントを開催しています。
       br
-      | 音楽ライブ、書道教室、親と子の関わり方教室といったセミナーも開催しております。
-      br
-      | イベント内容は以下のリンクからご覧いただきます。
-      br
-      |不定期に開催しておりますので、日程だけでもお気軽にお問い合わせください。
-    ul.event__Lists
+      |以下にてメニューをご覧いただけます。
+
+    ul.este__Lists
       -
-        const showeventData = [
+        const eventData = [
         {
-          title:`ヨガ教室`,
-          img:"henaColor.png",
+          title:"オカリナ教室",
+          img:"head.jpg",
+          className: "ocarina",
+          desk:"オカリナの演奏家の方からオカリナ演奏を学びます。",
+          time:"●日程:第4水曜日15時〜16時30分<br>場所:ジュンコスメハウス2階",
+          course:`●参加費用 3,000円　`,
+        },
+        {
+        title:"ヨガ教室",
+          img:"sholder.jpg",
           className: "yoga",
-          dataIndex: 3,
+          desk:"ヨガ教師の方からヨガを学びます。",
+          time:"●日程:毎週火曜日10時〜11時<br>場所:ジュンコスメハウス2階",
+          course:`●参加費用 1,000円　`,
         },
         {
-        title:`メイクアップショー`,
-          img:"service_event.jpg",
-          className: "makeshow",
-          dataIndex: 0,
-        },
-        {
-        title:`メイク教室`,
-          img:"service_makeup.jpg",
-          className: "makeclass",
-          dataIndex: 1,
-        },
-        {
-        title:`親と子の関わり方教室`,
-          img:"service_makeup.jpg",
-          className: "parentChild",
-          dataIndex: 2,
+          title:"体操教室",
+          img:"service_hena.jpg",
+          className: "stretch",
+          desk:"体操教師の方をお呼びして、体操をします。",
+          time:"●日程:第2、4土曜日14時半〜16時<br>場所:ジュンコスメハウス2階",
+          course:`●参加費用 3,000円　`,
         },
         ]
-      each item in showeventData
-          li.event__ListLink.js-Pop(class=`event__ListLink-${item.className}`,data-index=`${item.dataIndex}`)
-            a.event__List
-            h3.event__Title(class=`event__Title-${item.className}`) !{item.title}
-    a.c-moreButton(href="Contact") ご連絡はこちらから
+      each item in eventData
+          li.este__List
+            .este__ListInner
+              .este__Img(class=`este__Img-${item.className}`)
+                h3.este__Title(class=`este__Title-${item.className}`) !{item.title}
+              .este__DescBox
+                p.este__Desc !{item.desk}
+                p.este__Course !{item.time}
+                p.este__Course !{item.course}
+    a.c-moreButton(href="#contact") ご予約はこちらから
       br
       |(お問い合わせへ)
 

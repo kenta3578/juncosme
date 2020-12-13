@@ -10,17 +10,19 @@ html(lang='ja')
     meta(charset='utf-8')
     meta(rel="canonical" href=$selfURL)
     include include/_head.pug
-    include include/_script.pug
   body.service
     .l-Wrapper
       include include/_header_sub.pug
       .l-Content
         .l-Main
           main
-            include section/_SERVICE_ESTE.pug
-            include section/_SERVICE_IVY.pug
-            include section/_SERVICE_RENTAL.pug
+            include section/_SERVICE_FACE.pug
+            include section/_SERVICE_BODY.pug
+            include section/_SERVICE_SOMA.pug
             include section/_SERVICE_EVENT.pug
-            include section/_EVENT_POP.pug
+            include section/_SERVICE_IVY.pug
+            include section/_SERVICE_DRESS.pug
+            include section/_SERVICE_RENTAL.pug
             include section/_CONTACT.pug
       include include/_footer.pug
+      include include/_script.pug

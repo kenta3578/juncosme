@@ -24,8 +24,6 @@
     <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:300,400Sawarabi+Mincho" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
-    <script src="./assets/js/lib.js"></script>
-    <script src="./assets/js/main.bundle.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
   </head>
   <body class="service">
     <div class="l-Wrapper">
@@ -69,7 +67,7 @@
               </div>
               <h1 class="subMain__Title">サービス</h1>
             </div>
-            <div class="serviceMain c-section mt-11vw">
+            <div class="serviceMain c-section">
               <section class="este js-animation" id="este">
                 <h2 class="c-section__Title pt-25vw c-subSection">エステ</h2><img class="c-section__Title-Img" src="assets/images/g-line.svg" alt="">
                 <p class="este__Message">当店ではエステを行なっております。<br>以下にてメニューをご覧いただけます。</p>
@@ -77,22 +75,76 @@
                   <li class="este__List">
                     <div class="este__ListInner">
                       <div class="este__Img este__Img-headMassage">
-                        <h3 class="este__Title este__Title-headMassage">ヘッド<br>マッサージ</h3>
+                        <h3 class="este__Title este__Title-headMassage">フェ―シャルエステ</h3>
+                      </div>
+                      <div class="este__DescBox">
+                        <p class="este__Desc">フェーシャルエステをします。(美白パック付き)</p>
+                        <p class="este__Course">●料金 3,000円(20分)</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="este__List">
+                    <div class="este__ListInner">
+                      <div class="este__Img este__Img-ultrasound">
+                        <h3 class="este__Title este__Title-ultrasound">超音波エステ</h3>
+                      </div>
+                      <div class="este__DescBox">
+                        <p class="este__Desc">超音波エステをします。</p>
+                        <p class="este__Course">●料金 2,000円(20分)</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="este__List">
+                    <div class="este__ListInner">
+                      <div class="este__Img este__Img-make">
+                        <h3 class="este__Title este__Title-make">メイクアップ</h3>
+                      </div>
+                      <div class="este__DescBox">
+                        <p class="este__Desc">メイクをします。(スキンケア付き)</p>
+                        <p class="este__Course">●料金 3,000円</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="este__List">
+                    <div class="este__ListInner">
+                      <div class="este__Img este__Img-make">
+                        <h3 class="este__Title este__Title-make">ビューティーパ―トナ―エステ</h3>
+                      </div>
+                      <div class="este__DescBox">
+                        <p class="este__Desc">ビューティーパ―トナ―エステをします。</p>
+                        <p class="este__Course">●料金 3,000円</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul><a class="c-moreButton" href="#contact">ご予約はこちらから<br>(お問い合わせへ)</a>
+              </section>
+            </div>
+            <div class="serviceMain c-section">
+              <section class="ivy js-animation">
+                <h2 class="c-section__Title pt-25vw c-subSection">その他エステ</h2><img class="c-section__Title-Img" src="assets/images/g-line.svg" alt="">
+                <p class="este__Message">その他エステ(マッサージ、シャンプー)も行います。<br>以下にてメニューをご覧いただけます。</p>
+                <ul class="este__Lists">
+                  <li class="este__List">
+                    <div class="este__ListInner">
+                      <div class="este__Img este__Img-faceMassage">
+                        <h3 class="este__Title este__Title-faceMassage">フェ―シャルマッサージ</h3>
                       </div>
                       <div class="este__DescBox">
                         <p class="este__Desc">頭のコリをほぐします。<br>眼精疲労、お肌のたるみに効果的です。</p>
-                        <p class="este__Course">●料金 2000円(20分)</p>
+                        <p class="este__Course"></p>
+                        <p class="este__Course">●料金 2,000円</p>
                       </div>
                     </div>
                   </li>
                   <li class="este__List">
                     <div class="este__ListInner">
                       <div class="este__Img este__Img-sholderMassage">
-                        <h3 class="este__Title este__Title-sholderMassage">肩マッサージ</h3>
+                        <h3 class="este__Title este__Title-sholderMassage">デコルテ</h3>
                       </div>
                       <div class="este__DescBox">
                         <p class="este__Desc">肩、リンパをほぐします。肩の血行が良くなると、お肌の質も良くなります。</p>
-                        <p class="este__Course">●料金 2500円(20分)</p>
+                        <p class="este__Course"></p>
+                        <p class="este__Course">●料金 2,500円</p>
                       </div>
                     </div>
                   </li>
@@ -103,19 +155,108 @@
                       </div>
                       <div class="este__DescBox">
                         <p class="este__Desc">ヘナカラーをします。植物を原材料とした染色で、頭皮に優しい染色方法です。</p>
-                        <p class="este__Course">●料金 2500円　(ヘナ粉持参の場合2000円)</p>
+                        <p class="este__Course"></p>
+                        <p class="este__Course">●料金 5,000円　(ヘナ粉持参の場合2000円)</p>
                       </div>
                     </div>
                   </li>
                   <li class="este__List">
                     <div class="este__ListInner">
-                      <div class="este__Img este__Img-colorCode">
-                        <h3 class="este__Title este__Title-colorCode">カラー<br>コーディネート</h3>
+                      <div class="este__Img este__Img-cut">
+                        <h3 class="este__Title este__Title-cut">ヘアカット、シャンプー</h3>
                       </div>
                       <div class="este__DescBox">
-                        <p class="este__Desc">「オーラソーマ」診断によってお客様に合う「色」診断させていただきます。</p>
-                        <p class="este__Course">●料金 5000円(「色」を元にしたメイクアップ込み)
-  <br>●オーラソーマのみ 3000円</p>
+                        <p class="este__Desc">ヘアカット、シャンプー</p>
+                        <p class="este__Course"></p>
+                        <p class="este__Course">●料金 3,500円(15分)　</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="este__List">
+                    <div class="este__ListInner">
+                      <div class="este__Img este__Img-hand">
+                        <h3 class="este__Title este__Title-hand">ハンドマッサージ</h3>
+                      </div>
+                      <div class="este__DescBox">
+                        <p class="este__Desc">ハンドマッサージ</p>
+                        <p class="este__Course"></p>
+                        <p class="este__Course">●料金 3,500円(15分)　</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="este__List">
+                    <div class="este__ListInner">
+                      <div class="este__Img este__Img-foot">
+                        <h3 class="este__Title este__Title-foot">足つぼマッサージ</h3>
+                      </div>
+                      <div class="este__DescBox">
+                        <p class="este__Desc">足つぼマッサージ</p>
+                        <p class="este__Course"></p>
+                        <p class="este__Course">●料金 30分3000円（10分+1000円）</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul><a class="c-moreButton" href="#contact">ご予約はこちらから<br>(お問い合わせへ)</a>
+              </section>
+            </div>
+            <div class="serviceMain c-section">
+              <section class="ivy js-animation">
+                <h2 class="c-section__Title pt-25vw c-subSection">カラーコーディネート</h2><img class="c-section__Title-Img" src="assets/images/g-line.svg" alt="">
+                <p class="este__Message"><br>以下にてメニューをご覧いただけます。</p>
+                <ul class="este__Lists">
+                  <li class="este__List">
+                    <div class="este__ListInner">
+                      <div class="este__Img este__Img-colorCode">
+                        <h3 class="este__Title este__Title-colorCode">カラーコーディネート</h3>
+                      </div>
+                      <div class="este__DescBox">
+                        <p class="este__Desc">カラーコーディネートを行います。</p>
+                        <p class="este__Course"></p>
+                        <p class="este__Course">●費用 5,000円　</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul><a class="c-moreButton" href="#contact">ご予約はこちらから<br>(お問い合わせへ)</a>
+              </section>
+            </div>
+            <div class="serviceMain c-section" id="event">
+              <section class="ivy js-animation">
+                <h2 class="c-section__Title pt-25vw c-subSection">イベント</h2><img class="c-section__Title-Img" src="assets/images/g-line.svg" alt="">
+                <p class="este__Message">当店では定期的にイベントを開催しています。<br>以下にてメニューをご覧いただけます。</p>
+                <ul class="este__Lists">
+                  <li class="este__List">
+                    <div class="este__ListInner">
+                      <div class="este__Img este__Img-ocarina">
+                        <h3 class="este__Title este__Title-ocarina">オカリナ教室</h3>
+                      </div>
+                      <div class="este__DescBox">
+                        <p class="este__Desc">オカリナの演奏家の方からオカリナ演奏を学びます。</p>
+                        <p class="este__Course">●日程:第4水曜日15時〜16時30分<br>場所:ジュンコスメハウス2階</p>
+                        <p class="este__Course">●参加費用 3,000円　</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="este__List">
+                    <div class="este__ListInner">
+                      <div class="este__Img este__Img-yoga">
+                        <h3 class="este__Title este__Title-yoga">ヨガ教室</h3>
+                      </div>
+                      <div class="este__DescBox">
+                        <p class="este__Desc">ヨガ教師の方からヨガを学びます。</p>
+                        <p class="este__Course">●日程:毎週火曜日10時〜11時<br>場所:ジュンコスメハウス2階</p>
+                        <p class="este__Course">●参加費用 1,000円　</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="este__List">
+                    <div class="este__ListInner">
+                      <div class="este__Img este__Img-stretch">
+                        <h3 class="este__Title este__Title-stretch">体操教室</h3>
+                      </div>
+                      <div class="este__DescBox">
+                        <p class="este__Desc">体操教師の方をお呼びして、体操をします。</p>
+                        <p class="este__Course">●日程:第2、4土曜日14時半〜16時<br>場所:ジュンコスメハウス2階</p>
+                        <p class="este__Course">●参加費用 3,000円　</p>
                       </div>
                     </div>
                   </li>
@@ -128,7 +269,23 @@
                 <p class="ivy__Message">当社はアイビー化粧品（株）から認められた販売会社です。<br>製品についてはこちらからどうぞ</p><a class="c-moreButton" href="https://www.ivy.co.jp/products/">アイビー化粧品<br>(製品ページ)</a>
               </section>
             </div>
-            <div class="serviceMain c-section">
+            <div class="serviceMain c-section" id="rental">
+              <section class="rental js-animation">
+                <h2 class="c-section__Title c-subSection" id="dress">レンタルドレス</h2><img class="c-section__Title-Img" src="assets/images/g-line.svg" alt="">
+                <div class="dress__Box">
+                  <div class="swiper-container">
+                    <ul class="swiper-wrapper">
+                      <div class="swiper-slide"><img class="show__Img" src="assets/images/dress/dress1.jpg" alt=""></div>
+                      <div class="swiper-slide"><img class="show__Img" src="assets/images/dress/dress2.jpg" alt=""></div>
+                      <div class="swiper-slide"><img class="show__Img" src="assets/images/dress/dress3.jpg" alt=""></div>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <p class="dress__Desc">2021年〜 レンタルドレスもします。ドレスはメイクショーで使用したものです。<br>1着　10000円〜にてレンタルさせていただきます。</p>
+                </div><a class="c-moreButton" href="#contact">ご連絡はこちらから<br>(お問い合わせへ)</a>
+              </section>
+            </div>
+            <div class="serviceMain c-section" id="rental">
               <section class="rental js-animation">
                 <h2 class="c-section__Title c-subSection" id="rental">レンタルスペース</h2><img class="c-section__Title-Img" src="assets/images/g-line.svg" alt="">
                 <div class="rental__Box"><img class="rental__Img" src="assets/images/service_rental.jpg" alt="">
@@ -138,68 +295,6 @@
                   <p class="rental__Message">イベント等開催されたい方は以下から<br>お気軽にお問い合わせください。具体的な空き状況や、施設内容をご案内させていただきます。</p>
                 </div><a class="c-moreButton" href="#contact">ご連絡はこちらから<br>(お問い合わせへ)</a>
               </section>
-            </div>
-            <div class="serviceMain c-section">
-              <section class="event js-animation">
-                <h2 class="c-section__Title c-subSection" id="event">イベント</h2><img class="c-section__Title-Img" src="assets/images/g-line.svg" alt=""><img class="event__Img" src="assets/images/service_event.jpg" alt="">
-                <p class="event__Message">当店では定期的に美容目的のイベントや<br>音楽ライブ、書道教室、親と子の関わり方教室といったセミナーも開催しております。<br>イベント内容は以下のリンクからご覧いただきます。<br>不定期に開催しておりますので、日程だけでもお気軽にお問い合わせください。</p>
-                <ul class="event__Lists">
-                  <li class="event__ListLink js-Pop event__ListLink-yoga" data-index="3"><a class="event__List"></a>
-                    <h3 class="event__Title event__Title-yoga">ヨガ教室</h3>
-                  </li>
-                  <li class="event__ListLink js-Pop event__ListLink-makeshow" data-index="0"><a class="event__List"></a>
-                    <h3 class="event__Title event__Title-makeshow">メイクアップショー</h3>
-                  </li>
-                  <li class="event__ListLink js-Pop event__ListLink-makeclass" data-index="1"><a class="event__List"></a>
-                    <h3 class="event__Title event__Title-makeclass">メイク教室</h3>
-                  </li>
-                  <li class="event__ListLink js-Pop event__ListLink-parentChild" data-index="2"><a class="event__List"></a>
-                    <h3 class="event__Title event__Title-parentChild">親と子の関わり方教室</h3>
-                  </li>
-                </ul><a class="c-moreButton" href="Contact">ご連絡はこちらから<br>(お問い合わせへ)</a>
-              </section>
-            </div>
-            <div class="eventPop">
-              <div class="eventPop__Inner">
-                <div class="eventPop__ButtonOuter"><a class="eventPop__CloseOuter js-eventPop__Close" href="#"><span class="eventPop__Close"></span>
-                    <p class="eventPop__Close-Txt">閉じる</p></a></div>
-                <section class="js-PopContent makeShow" data-index="0">
-                  <h3 class="eventPop__Title">メイクアップショーとは</h3>
-                  <div class="eventPop__Box"><img class="eventPop__Img" src="assets/images/service_event.jpg" alt="">
-                    <p class="eventPop__Desc">
-                      メイクアップショーはメイクさんとモデルさんのためのイベントです。<br>メイクさんは培ってきた技術を使ってモデルさんの魅力を引き出します。<br>
-                      最後には写真撮影を行います。定期的に開催しており、メイクさんとモデルさんを随時募集しております。<br>お気軽にお問い合わせください。
-                    </p>
-                  </div>
-                </section>
-                <section class="js-PopContent makeSchool" data-index="1">
-                  <h3 class="eventPop__Title">メイク教室</h3>
-                  <div class="eventPop__Box"><img class="eventPop__Img" src="assets/images/service_makeup.jpg" alt="">
-                    <p class="eventPop__Desc">
-                      自分がどんなメイクをしたいのか。<br>具体的なイメージがある方は、ではどんなメイクをすればいいのか。イメージがない方はまずどんなメイクが似合うのか。<br>
-                      メイク、化粧品の知識を持った美容部員がアドバイスさせていただきます。
-                    </p>
-                  </div>
-                </section>
-                <section class="js-PopContent parentChild" data-index="2">
-                  <h3 class="eventPop__Title">親と子の関わり方教室</h3>
-                  <div class="eventPop__Box"><img class="eventPop__Img" src="assets/images/parentChild.jpg" alt="">
-                    <p class="eventPop__Desc">
-                      子育てに決まった方法はありません。だからいろんなアプローチを試して見ることが必要です。<br>まずは子どもとして見るのではなく、一人の人間として見てあげる。<br>その中でベストなアプローチを見つけるべきです。<br>
-                      「あなたに合った、”子どもへのアプローチの方法”」を講師と一緒に探して行きましょう。
-                    </p>
-                  </div>
-                </section>
-                <section class="js-PopContent yoga" data-index="3">
-                  <h3 class="eventPop__Title">ヨガ教室</h3>
-                  <div class="eventPop__Box"><img class="eventPop__Img" src="assets/images/event_yoga.jpg" alt="">
-                    <p class="eventPop__Desc">
-                      当店の2Fフリースペースでは毎週火曜にヨガ教室を開催しております。<br>ヨガで健康的な体作りを初めて見ませんか？<br>
-                      初めての方も毎回いらしゃいますので、<br>お気軽にお問い合わせください。
-                    </p>
-                  </div>
-                </section><a class="c-moreButton js-eventPop__Close" href="#Contact">お問い合わせへ</a>
-              </div>
             </div>
             <div class="contact__Ancor" id="contact"></div>
             <section class="contact c-section js-animation">
@@ -230,6 +325,30 @@
           </ul><small class="footer__copyRight">© ジュン・コスメハウス<br>all right reserved.</small>
         </div>
       </footer>
+      <script src="./assets/js/lib.js"></script>
+      <script src="./assets/js/main.bundle.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+          https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+      
+      <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyBkU23zMmI_HlgewzLIJ6wTZM0cBT-1RJw",
+          authDomain: "juncosme.firebaseapp.com",
+          projectId: "juncosme",
+          storageBucket: "juncosme.appspot.com",
+          messagingSenderId: "612997236645",
+          appId: "1:612997236645:web:65180d59d9daeeb2734a4c",
+          measurementId: "G-064ZF4N0SQ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+      </script>
     </div>
   </body>
 </html>

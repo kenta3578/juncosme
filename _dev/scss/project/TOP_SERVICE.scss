@@ -1,7 +1,9 @@
 @charset "utf-8";
 @import "../foundation/_mixin.scss";
+
 .service {
   background-color: #fff;
+
   @include pc {
     overflow-x: scroll;
   }
@@ -10,25 +12,31 @@
     width: 85%;
     padding: 12vw 0;
     margin: 0 auto;
+
     @include pc {
       width: 77%;
     }
   }
+
   .c-moreButton {
     width: 100%;
   }
+
   &__Lists {
     margin-bottom: 12vw;
+
     @include pc {
       margin: 5rem auto;
       display: flex;
       flex-wrap: wrap;
     }
   }
+
   &__ListInner {
     display: block;
     width: 100%;
     margin-bottom: 5vw;
+
     @include pc {
       display: flex;
       justify-content: space-between;
@@ -38,25 +46,31 @@
       display: block;
     }
   }
+
   &__DescBox {
     width: 100%;
   }
+
   &__PopLink {
     border-bottom: 1px solid $font;
   }
+
   &__Desc {
     flex-grow: 1;
     text-align: left;
     margin-top: 10vw;
+
     @include pc {
       margin: 3rem 0;
       text-align: left;
     }
   }
+
   &__List {
     border-bottom: 1px solid $light-gray;
     margin-top: 10vw;
     padding-bottom: 7vw;
+
     @include pc {
       margin: 4rem auto;
       padding-bottom: 0;
@@ -70,11 +84,13 @@
         background: $rose;
       }
     }
+
     &:nth-child(3) {
       .service__Title {
         background: $silver;
       }
     }
+
     &:nth-child(4) {
       .service__Title {
         background: $blue;
@@ -87,6 +103,7 @@
     align-items: center;
     margin-bottom: 5vw;
   }
+
   &__Img {
     max-width: 100%;
     max-width: 100%;
@@ -94,6 +111,7 @@
     width: auto;
 
     @include buttonShadow();
+
     @include pc {
       width: auto;
       height: 20rem;
@@ -101,6 +119,7 @@
       right: 1rem;
     }
   }
+
   &__Title {
     background: rgb(53, 187, 169);
     color: #fff;
@@ -111,36 +130,41 @@
     padding: 3vw;
     width: 90%;
     margin: 0 auto 7vw;
+
     @include pc {
       font-size: 2.8rem;
       padding: 1.6rem;
       width: 100%;
     }
   }
+
   &__Category {
     font-size: get_vw(12);
     padding: 2vw 5vw;
     margin-right: 10vw;
     border: 0.1rem solid $light-gray;
+
     &-News {
       color: $blue;
     }
+
     &-Event {
       color: $gold;
     }
   }
-  .c-section__Title-Img {
-  }
-  .c-moreButton {
-    @include pc {
-      margin: 0 auto;
-      width: 65%;
-      position: absolute;
-      left: 20%;
-      bottom: 0;
-      margin-bottom: 5rem;
-    }
-  }
+
+  .c-section__Title-Img {}
+
+  // .c-moreButton {
+  //   @include pc {
+  //     margin: 0 auto;
+  //     width: 65%;
+  //     position: absolute;
+  //     left: 20%;
+  //     bottom: 0;
+  //     margin-bottom: 5rem;
+  //   }
+  // }
 }
 
 .top__notice {

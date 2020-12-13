@@ -1,0 +1,68 @@
+
+.serviceMain.c-section
+  section.ivy.js-animation
+    h2.c-section__Title.pt-25vw.c-subSection その他エステ
+    img.c-section__Title-Img(src="assets/images/g-line.svg" alt="")
+    p.este__Message その他エステ(マッサージ、シャンプー)も行います。
+      br
+      |以下にてメニューをご覧いただけます。
+
+    ul.este__Lists
+      -
+        const bodyData = [
+        {
+          title:"フェ―シャルマッサージ",
+          img:"face.jpg",
+          className: "faceMassage",
+          desk:"頭のコリをほぐします。<br>眼精疲労、お肌のたるみに効果的です。",
+          course:"●料金 2,000円",
+        },
+        {
+        title:"デコルテ",
+          img:"sholder.jpg",
+          className: "sholderMassage",
+          desk:"肩、リンパをほぐします。肩の血行が良くなると、お肌の質も良くなります。",
+          course:"●料金 2,500円",
+        },
+        {
+          title:"ヘナカラー",
+         img:"service_hena.jpg",
+          className: "henaColor",
+          desk:"ヘナカラーをします。植物を原材料とした染色で、頭皮に優しい染色方法です。",
+          course:`●料金 5,000円　(ヘナ粉持参の場合2000円)`,
+        },
+        {
+          title:"ヘアカット、シャンプー",
+          img:"service_hena.jpg",
+          className: "cut",
+          desk:"ヘアカット、シャンプー",
+          course:`●料金 3,500円(15分)　`,
+        },
+        {
+          title:"ハンドマッサージ",
+          img:"service_hena.jpg",
+          className: "hand",
+          desk:"ハンドマッサージ",
+          course:`●料金 3,500円(15分)　`,
+        },
+        {
+          title:"足つぼマッサージ",
+          img:"service_hena.jpg",
+          className: "foot",
+          desk:"足つぼマッサージ",
+          course:`●料金 30分3000円（10分+1000円）`,
+        },
+        ]
+      each item in bodyData
+          li.este__List
+            .este__ListInner
+              .este__Img(class=`este__Img-${item.className}`)
+                h3.este__Title(class=`este__Title-${item.className}`) !{item.title}
+              .este__DescBox
+                p.este__Desc !{item.desk}
+                p.este__Course !{item.time}
+                p.este__Course !{item.course}
+    a.c-moreButton(href="#contact") ご予約はこちらから
+      br
+      |(お問い合わせへ)
+

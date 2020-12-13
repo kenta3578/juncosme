@@ -4,7 +4,7 @@
     |＞
     p.bredList__Now サービス
   h1.subMain__Title サービス
-.serviceMain.c-section.mt-11vw
+.serviceMain.c-section
   section.este#este.js-animation
     h2.c-section__Title.pt-25vw.c-subSection エステ
     img.c-section__Title-Img(src="assets/images/g-line.svg" alt="")
@@ -14,38 +14,37 @@
 
     ul.este__Lists
       -
-        const showesteData = [
+        const faceData = [
         {
-          title:"ヘッド<br>マッサージ",
+          title:"フェ―シャルエステ",
           img:"head.jpg",
           className: "headMassage",
-          desk:"頭のコリをほぐします。<br>眼精疲労、お肌のたるみに効果的です。",
-          course:"●料金 2000円(20分)",
+          desk:"フェーシャルエステをします。(美白パック付き)",
+          course:"●料金 3,000円(20分)",
         },
         {
-        title:"肩マッサージ",
+        title:"超音波エステ",
           img:"sholder.jpg",
-          className: "sholderMassage",
-          desk:"肩、リンパをほぐします。肩の血行が良くなると、お肌の質も良くなります。",
-          course:"●料金 2500円(20分)",
+          className: "ultrasound",
+          desk:"超音波エステをします。",
+          course:"●料金 2,000円(20分)",
         },
         {
-          title:"ヘナカラー",
+          title:"メイクアップ",
           img:"service_hena.jpg",
-          className: "henaColor",
-          desk:"ヘナカラーをします。植物を原材料とした染色で、頭皮に優しい染色方法です。",
-          course:`●料金 2500円　(ヘナ粉持参の場合2000円)`,
+          className: "make",
+          desk:"メイクをします。(スキンケア付き)",
+          course:`●料金 3,000円`,
         },
         {
-          title:"カラー<br>コーディネート",
-          img:"service_ora.jpg",
-          className: "colorCode",
-          desk:"「オーラソーマ」診断によってお客様に合う「色」診断させていただきます。",
-          course:`●料金 5000円(「色」を元にしたメイクアップ込み)
-          <br>●オーラソーマのみ 3000円`,
+          title:"ビューティーパ―トナ―エステ",
+          img:"service_hena.jpg",
+          className: "make",
+          desk:"ビューティーパ―トナ―エステをします。",
+          course:"●料金 3,000円",
         },
         ]
-      each item in showesteData
+      each item in faceData
           li.este__List
             .este__ListInner
               .este__Img(class=`este__Img-${item.className}`)

@@ -1,0 +1,68 @@
+@charset "utf-8";
+@import "../foundation/_mixin.scss";
+
+.dress {
+  background-color: #fff;
+  padding: 3rem 0 0;
+
+  @include pc {
+    overflow-x: scroll;
+  }
+
+  &__Inner {
+    width: 85%;
+    padding: 12vw 0 0;
+    margin: 0 auto;
+
+    @include pc {
+      width: 77%;
+    }
+  }
+
+
+  &__Box {
+    margin: 4rem auto 0;
+  }
+
+
+
+  &__Desc {
+    margin: 0 auto;
+    margin: 2rem 2rem 0;
+    font-size: 1.6rem;
+    width: auto;
+    text-align: left;
+
+    @include pc {
+      margin: 4rem auto 0;
+      font-size: 1.8rem;
+      width: 77%;
+    }
+
+  }
+
+  &__Notice {
+    margin-top: 2rem;
+    display: block;
+
+  }
+
+  &__Img {
+    max-width: 100%;
+    max-height: 420px;
+  }
+
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+  width: 20px;
+  height: 32.58px;
+  fill: #666;
+  stroke: none;
+  stroke-width: 0;
+  background-image: none;
+  z-index: 10000;
+}

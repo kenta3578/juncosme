@@ -2,6 +2,7 @@
 @import "../foundation/_mixin.scss";
 .serviceMain {
   background: #fff;
+  padding-top: 4vw;
   @include pc {
     z-index: 0;
     position: relative;

@@ -1,0 +1,32 @@
+
+
+.serviceMain.c-section#rental
+  section.rental.js-animation
+    h2.c-section__Title#dress.c-subSection レンタルドレス
+    img.c-section__Title-Img(src="assets/images/g-line.svg" alt="")
+    .dress__Box
+      .swiper-container
+          ul.swiper-wrapper
+            -
+              const makeShowData = [
+              {
+                img: 'assets/images/dress/dress1'
+              },
+              {
+                img: 'assets/images/dress/dress2'
+              },
+              {
+                img: 'assets/images/dress/dress3'
+              },
+              ]
+            each item in makeShowData
+              div.swiper-slide
+                img.show__Img(src=`${item.img}.jpg` alt="")
+          .swiper-pagination
+      p.dress__Desc 2021年〜 レンタルドレスもします。ドレスはメイクショーで使用したものです。
+        br
+        | 1着　10000円〜にてレンタルさせていただきます。
+    a.c-moreButton(href="#contact") ご連絡はこちらから
+      br
+      |(お問い合わせへ)
+
